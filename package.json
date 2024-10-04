@@ -1,0 +1,30 @@
+{
+  "name": "structcon-projekts-",
+  "version": "1.0.0",
+  "description": "An contruction company aimed at satisfying all your building needs",
+  "source": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [
+    "structcon",
+    "construction",
+    "building",
+    "africa",
+    "Ghana"
+  ],
+  "author": "nightfire studios",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "firebase": "^10.13.2",
+    "gsap": "^3.12.5",
+    "parcel-bundler": "^1.12.5"
+  }
+}
