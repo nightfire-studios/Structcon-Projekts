@@ -38,6 +38,31 @@ $helevetica-bold:Helvetica-bold;
 //     navigation: auto;
 // }
 @import url(../css/projects.scss);
+@import url(../css/services.scss);
+
+// custom scrollbar//
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e7e4e3; 
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #D9592F;
+    border-radius: 10px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D9592F; 
+  }
 
 body{
     margin: 0;
