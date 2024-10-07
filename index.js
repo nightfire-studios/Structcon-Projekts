@@ -1,6 +1,7 @@
 import {gsap} from "gsap";
 import {navHover} from '/nav_menus.js'
 import {carousel} from '/carousel.js'
+import {projectFunctions} from './projects.js'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -27,10 +28,22 @@ const analytics = getAnalytics(app);
 
 
 try {
+
 navHover()
 carousel()
+
 } catch (error) {
   
 }
+
+try {
+  projectFunctions() 
+} catch (error) {
+  
+}
+
+
+
+
 
 

@@ -4,7 +4,7 @@ export const carousel = () => {
     const carousel_trey = document.querySelector('.image_trey')
     const arrow_left = document.querySelector('.arrow_left')
     const arrow_right = document.querySelector('.arrow_right')
-    const total_index = document.querySelectorAll('.project').length - 1
+    const total_index = document.querySelectorAll('.project').length 
     const featured_circle_nav = document.querySelectorAll('.featured_mini_nav .circle')
     const banner_mini_nav = document.querySelectorAll('.mini_nav .circle')
     const banner_image_trey = document.querySelector('.banner_image_trey')
@@ -19,7 +19,7 @@ export const carousel = () => {
     const rotate_value = 90
     var start_value = 0
     const move_value = 60
-    var count = 1;
+    var count = 2;
     var value = 0;
 
    
@@ -194,7 +194,7 @@ export const carousel = () => {
 
     arrow_left.onclick = () => {
 
-        if (count > 1) {
+        if (count > 2) {
             count--;
             value -= move_value
 
@@ -443,10 +443,7 @@ export const carousel = () => {
     }
 
 
-
-
-
-
+   
 
     //Carousel Function ends here...//
 }

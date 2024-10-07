@@ -105,18 +105,23 @@ $color-primary: #D9592F;
             display: grid;
             place-items: end;
             position: relative;
+            
 
             .container{
-                overflow: auto;
-                height: 90vh;
+             
                 margin: 0;
-                scroll-snap-type: y mandatory;
+                overflow: hidden;
+              
 
                 .project_viewport{
                     display: flex;
+                    height: 90vh;
                     flex-direction: column;
                     gap: 2rem;
                     margin-top: 50px;
+                    overflow-y: auto;
+                    scroll-snap-type: y mandatory;
+
                     .project{
                         width: 100%;
                         height: 70vh;
@@ -171,26 +176,38 @@ $color-primary: #D9592F;
                         background-size: cover;
                     }
                 }
-            }
 
-            .images_footer{
-                width: 100%;
-                height: 15vh;
-                background-image: linear-gradient(to top,white,transparent);
-                position: absolute;
-                top: 100%;
-                transform: translateY(-100%);
-                display: grid;
-                place-items: center;
-                z-index: 5;
-
-                .line{
-                    width: 1px;
-                    height: 45px;
-                    border-left: 1px solid gray;
+                .images_footer{
+                    width: inherit;
+                    height: 15vh;
+                    background-image: linear-gradient(to top,white,transparent);
+                    position: absolute;
+                    top: 100%;
+                    transform: translateY(-100%);
+                    display: grid;
+                    place-items: center;
+                    z-index: 5;
+    
+                    .line{
+                        text-align: center;
+                        
+                       h1{
+                        margin: 0;
+                        span{
+                            font-weight: bolder;
+                            font-family: Helvetica-bold;
+                        }
+                       }
+    
+                       p{
+                        margin: 0;
+                       }
+                    }
+                   
                 }
-               
             }
+
+            
         }
     }
   }
