@@ -52,8 +52,9 @@ $helevetica-bold:Helvetica-bold;
 
     //content begins here...
     .container{
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
+        margin-top: 5%;
 
         .intro_content{
             display: flex;
@@ -68,5 +69,117 @@ $helevetica-bold:Helvetica-bold;
                 }
             }
         }
+    }
+
+    .mid_content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+
+
+        .mid_content_text{
+           width: 50%; 
+           height: 60dvh;
+            
+            p{
+                font-size: 1.4rem;
+                line-height: 30px;
+               
+            }
+
+        }
+
+        .mid_content_img{
+            width: 50%;
+         
+
+
+            img{
+                width: 100%;
+                height: 70dvh;
+            
+            }
+        }
+
+    }
+
+    .content_deteils{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5%;
+
+        .deteils_on_vision{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+           .vision_text{
+            h1{
+                text-align: center;
+            }
+           }
+
+           .border_line1{
+                p{
+                    border-left: 1px solid grey;
+                    height: 65dvh;
+               }
+        
+             }
+
+        }
+
+
+       
+        .deteils_on_values{
+            width: 30%;
+        }
+
+        
+
+       
+        .deteils_on_mission{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .vision_text{
+                margin-left: 30px;
+                h1{
+                    text-align: center;
+                }
+            }
+    
+               .border_line2{
+
+
+                    h1{
+                        border-left: 1px solid grey;
+                        height: 68dvh;
+                   }
+            
+                 }
+        }
+
+        // .border_line2{
+        //     width: 2%;
+        //     background-color: #D9592F;
+        //     h1{
+        //         border-right: 1px solid gray;
+        //         width: 2%;
+        //         height: 40dvh;
+        //     }
+        // }
+
+    }
+
+    h1{
+        font-size: 40px;
+        margin-top: 120px;
     }
 }
