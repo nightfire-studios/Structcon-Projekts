@@ -39,6 +39,8 @@ $helevetica-bold:Helvetica-bold;
 // }
 @import url(../css/projects.scss);
 @import url(../css/services.scss);
+@import url(../css/grace.scss);
+@import url(../css/about.scss);
 
 // custom scrollbar//
 /* width */
@@ -166,7 +168,7 @@ body{
                 height: 100%;
                 position: absolute;
                 left: 0%;
-                transition: .5s;
+                transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
                 display: flex;
                 transform: translateX(-0%);
                 video{
@@ -441,6 +443,7 @@ body{
                                             img{
                                                 width: 100%;
                                                 height: 80%;
+                                                object-fit: cover;
                                             }
 
                                             p{
@@ -451,11 +454,12 @@ body{
                                                 &:nth-child(2){
                                                     font-size: 1.1rem;
                                                     font-family: $helevetica-medium;
-                                                    color:$color-primary ;
+                                                    color:rgb(72, 72, 72) ;
                                                 }
 
                                                 &:nth-child(3){
                                                     font-size: .7rem;
+                                                    color: $color-primary;
                                                 }
                                             }
                                         }

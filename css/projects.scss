@@ -20,6 +20,10 @@ $color-primary: #D9592F;
     font-family: Helvetica-thin;
     src: url(../fonts/HelveticaNeueThin.otf)
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .project_container{
     border-bottom: solid 1px $border-primary;
@@ -52,7 +56,7 @@ $color-primary: #D9592F;
 
                 h2{
                     font-family: Helvetica-medium;
-                    color: rgba(70, 70, 70, 0.893);
+                   
                     
                 }
     
@@ -157,6 +161,7 @@ $color-primary: #D9592F;
                             &:hover{
                                 background-color: white;
                                 color: black;
+                                padding: 20px 55px;
                             }
                         }
                     }
@@ -167,12 +172,12 @@ $color-primary: #D9592F;
                     }
 
                     .project_2{
-                        background: url(../images/project2.webp);
+                        background: url(../images/abetitfi_container/render_1.webp);
                         background-size: cover;
                     }
 
                     .project_3{
-                        background: url(../images/project3.webp);
+                        background: url(../images/josh/render_1.webp);
                         background-size: cover;
                     }
                 }

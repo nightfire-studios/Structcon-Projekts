@@ -1,0 +1,62 @@
+$color-primary: #D9592F;
+$border-primary:rgb(181, 181, 181);
+
+@font-face {
+    font-family: Helvetica-bold;
+    src: url(../fonts/HelveticaNeueBold.otf);
+}
+
+@font-face{
+    font-family: Helvetica-medium;
+    src:url(../fonts/HelveticaNeueMedium.otf)
+}
+
+@font-face{
+    font-family: Helvetica-light;
+    src: url(../fonts/HelveticaNeueLight.otf);
+}
+
+@font-face{
+    font-family: Helvetica-thin;
+    src: url(../fonts/HelveticaNeueThin.otf)
+}
+
+$helevetica-medium:Helvetica-medium;
+$helevetica-light:Helvetica-light;
+$helevetica-thin:Helvetica-thin;
+$helevetica-bold:Helvetica-bold;
+
+.about_container{
+
+    // banner begins here...
+    .about_banner{
+        width: 100%;
+        height: 70svh;
+        overflow: hidden;
+        position: relative;
+
+        img{
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+
+        .overlay{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to top,black,transparent);
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    //content begins here...
+    .container{
+        width: 95%;
+        margin: 0 auto;
+
+        .intro_content{
+            
+        }
+    }
+}
