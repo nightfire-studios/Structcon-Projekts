@@ -26,7 +26,7 @@ $helevetica-light:Helvetica-light;
 $helevetica-thin:Helvetica-thin;
 $helevetica-bold:Helvetica-bold;
 
-.about_container{
+.about_us_container{
 
     // banner begins here...
     .about_banner{
@@ -52,8 +52,9 @@ $helevetica-bold:Helvetica-bold;
 
     //content begins here...
     .container{
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
+        margin-top: 100px;
 
         .intro_content{
             display: flex;
@@ -61,12 +62,162 @@ $helevetica-bold:Helvetica-bold;
             .flex{
                 &:nth-child(1){
                     width: 40%;
+                    h1{
+                        margin-top: 0;
+                        text-transform: uppercase;
+                        font-size: clamp(1rem,3vw,3.5rem);
+                    }
                 }
 
                 &:nth-child(2){
                     width: 60%;
+
+                    
+
+                    p{
+                        line-height: 2;
+                        font-size: .97rem;
+
+                        &:nth-child(2){
+                            margin-top: 30px; 
+                         }
+
+                        &:nth-child(3){
+                           margin-top: 60px; 
+                        }
+                    }
                 }
             }
         }
+    }
+
+    .mid_content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 150px;
+        gap: 150px;
+
+
+        .mid_content_text{
+           width: 40%; 
+            
+            p{
+                font-size: .97rem;
+                line-height: 30px;
+               
+            }
+
+        }
+
+        .mid_content_img{
+            width: 60%;
+         
+
+
+            img{
+                width: 100%;
+                height: 80dvh;
+                object-fit: cover;
+            
+            }
+        }
+
+    }
+
+    .content_details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+
+        .details_on_vision{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+           .vision_text{
+            margin: 0 50px;
+            line-height: 2;
+
+            h2{
+                font-size: clamp(1rem,2vw,2.5rem);
+            }
+           }
+
+           .border_line1{
+                p{
+                    border-left: 1px solid grey;
+                    height: 65dvh;
+                    
+               }
+        
+             }
+
+        }
+
+
+       
+        .details_on_values{
+            width: 30%;
+
+            h1{
+                font-size: clamp(1rem,3vw,3.5rem);
+            }
+            p{
+                margin-top: 35px;
+                line-height: 2;
+            }
+        }
+
+        
+
+       
+        .details_on_mission{
+            width: 30%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .vision_text{
+                margin-left: 30px;
+                h2{
+                    font-size: clamp(1rem,2vw,2.5rem);
+                    
+                }
+
+                p{
+                    line-height: 2;
+                }
+            }
+    
+               .border_line2{
+
+
+                    h1{
+                        border-left: 1px solid grey;
+                        height: 68dvh;
+                   }
+            
+                 }
+        }
+
+        // .border_line2{
+        //     width: 2%;
+        //     background-color: #D9592F;
+        //     h1{
+        //         border-right: 1px solid gray;
+        //         width: 2%;
+        //         height: 40dvh;
+        //     }
+        // }
+
+    }
+
+    h1{
+        font-size: 40px;
+        margin-top: 120px;
     }
 }
