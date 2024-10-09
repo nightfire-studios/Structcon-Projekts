@@ -56,7 +56,17 @@ $helevetica-bold:Helvetica-bold;
         margin: 0 auto;
 
         .intro_content{
-            
+            display: flex;
+
+            .flex{
+                &:nth-child(1){
+                    width: 40%;
+                }
+
+                &:nth-child(2){
+                    width: 60%;
+                }
+            }
         }
     }
 }
