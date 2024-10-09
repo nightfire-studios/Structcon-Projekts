@@ -261,6 +261,7 @@ $helevetica-bold:Helvetica-bold;
         .content2{
             
             .container{
+                border-bottom: 1px solid rgb(206, 206, 206);
                 .content_img{
                     width: 100%;
                     margin-top: 100px;
@@ -318,6 +319,14 @@ $helevetica-bold:Helvetica-bold;
 
         .gallery_content{
             margin-bottom: 30px;
+            p{
+                color: gray;
+            }
+            h1{
+                &:last-child{
+                    font-size: clamp(1rem,3vw,3rem);
+                }
+            }
         }
 
         .gallery_holder{
