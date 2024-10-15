@@ -1,11 +1,11 @@
 {
   "name": "structcon-projekts-",
   "version": "1.0.0",
-  "description": "An contruction company aimed at satisfying all your building needs",
+  "description": "A contruction company aimed at satisfying all your building needs",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel",
-    "build": "parcel build"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "keywords": [
     "structcon",
@@ -19,12 +19,11 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0",
-    "process": "^0.11.10",
-    "vite": "^5.4.8"
+    "process": "^0.11.10"
   },
   "dependencies": {
     "firebase": "^10.13.2",
     "gsap": "^3.12.5",
-    "parcel-bundler": "^1.12.5"
+    "src": "^1.1.2"
   }
 }

@@ -1,0 +1,1082 @@
+$color-primary: #D9592F;
+$border-primary:rgb(181, 181, 181);
+
+@font-face {
+    font-family: Helvetica-bold;
+    src: url(../fonts/HelveticaNeueBold.otf);
+}
+
+@font-face{
+    font-family: Helvetica-medium;
+    src:url(../fonts/HelveticaNeueMedium.otf)
+}
+
+@font-face{
+    font-family: Helvetica-light;
+    src: url(../fonts/HelveticaNeueLight.otf);
+}
+
+@font-face{
+    font-family: Helvetica-thin;
+    src: url(../fonts/HelveticaNeueThin.otf)
+}
+
+$helevetica-medium:Helvetica-medium;
+$helevetica-light:Helvetica-light;
+$helevetica-thin:Helvetica-thin;
+$helevetica-bold:Helvetica-bold;
+
+@mixin buttonStyle (){
+    all: unset;
+    background-color: $color-primary;
+    color: white;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+@mixin crawler($name){
+    @keyframes crawl {
+  
+        100%{
+            transform: translate(calc(-75% - .1rem));
+        }
+    }
+}
+// @view-transition {
+//     navigation: auto;
+// }
+@import url(../css/projects.scss);
+@import url(../css/services.scss);
+@import url(../css/grace.scss);
+@import url(../css/about.scss);
+
+// custom scrollbar//
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f3f3f3; 
+    box-shadow: inset 0 0 5px rgb(187, 187, 187);
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a8a8a869;
+    border-radius: 10px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D9592F; 
+  }
+
+body{
+    margin: 0;
+    padding:0;
+    line-height: 1.5;
+    font-family: Helvetica-light;
+
+    
+
+    section{
+        //Nav styling begins here...//
+        nav{
+            border-bottom: 1px solid rgb(220, 220, 220);
+            .container{
+                width: 90%;
+                margin: 0 auto;
+
+                .flexbox{
+                    display: flex;
+                    align-items: center;
+                    
+                    .flex{
+                        
+                        &:first-child{
+                            width: 15%;
+                            .logo_container{
+                                width: 60%;
+
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &:last-child{
+                            flex-grow: 1;
+                            display: grid;
+                            place-items: end;
+                            ul{
+                                padding: 0;
+                                list-style-type: none;
+                                margin: 0;
+                                font-family: helvetica-light;
+                                display: flex;
+
+                                a{
+                                    
+                                    padding: 30px;
+                                    font-size: .9rem;
+                                    border-right: 1px solid rgb(220, 220, 220);
+                                    background-color: $color-primary;
+                                    cursor: pointer;
+                                    color: white;
+                                    text-decoration: none;
+                                   
+
+                                    &:first-child{
+                                        border-left: 1px solid rgb(220, 220, 220);
+                            
+                                    }
+                                }
+
+                                .inactive{
+                                    background-color: white;
+                                    color: gray;
+                                }
+
+                                .active{
+                                        
+                                    background-color: $color-primary;
+                                    color: white;
+                                    
+
+                                   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        //Nav styling ends here ...//
+
+        //Banner styling begins here..//
+
+        .banner{
+            width: 100%;
+            height: 91svh;
+            background-color: $color-primary;
+            display: flex;
+            align-items:  flex-end;
+            position: relative;
+            color: white;
+            overflow: hidden;
+
+            .banner_image_trey{
+                width: 300%;
+                height: 100%;
+                position: absolute;
+                left: 0%;
+                transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                display: flex;
+                transform: translateX(-0%);
+                img{
+                    width: inherit;
+                    height: inherit;
+                    // position: absolute;
+                    // top: 0;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                .design_build_section,.interior_design{
+                    width: inherit;
+                    height: inherit;
+                }
+
+                .design_build_section{
+                    background-image: url(../images/breaker.webp);
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .interior_design{
+                    background-image: url(../images/interior.webp);
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            
+
+            .banner_footer{
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                z-index: 2;
+                padding-bottom: 20px;
+
+                .banner_navigation{
+                    :is(
+                        .design_build,
+                        .construction_management,
+                        .interior_design
+                    ){
+                        display: flex;
+                        align-items: center;
+
+                        h2{
+                            margin: 7px;
+                            text-transform: uppercase;
+                            font-family: Helvetica-thin;
+                            font-weight: 100;
+                            font-size: 1rem;
+                            color: grey;
+                        }
+
+                        .x_img{
+                            width: 30px;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        
+                    }
+
+                    .design_build{
+                        h2{
+                            color: white;
+                            font-size: 2.2rem;
+                            margin-bottom: 0px;
+                        }
+
+                        .x_img{
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                    }
+
+                    .construction_management{
+                        padding-left: 50px;
+                    }
+                }
+
+
+                .flexbox{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .flex{
+                        p{
+                            font-size: clamp(.6rem,1vw,.8rem)
+                            
+                        }
+                        
+
+                        .mini_nav{
+                            width: 75px;
+                            height: 30px;
+                            border: 1.5px solid grey;
+                            background-color: rgba(4, 4, 4, 0.916);
+                            border-radius: 20px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            margin-bottom: 10px;
+
+                            .circle{
+                                width: 6px;
+                                height: 6px;
+                                border:1px solid white;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                transition: .5s;
+                                
+                                &:first-child{
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: white;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            .gradient_overlay{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                background-image: linear-gradient(to top, black, transparent);
+                z-index: 1;
+
+                
+            }
+
+            .color_overlay{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                background-color: $color-primary;
+                mix-blend-mode: color;
+                z-index: 1;
+
+                
+            }
+
+            
+        }
+
+        .balance{
+            width: 90%;
+            height: 80vh;
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%,-60%);
+            border-left: 1px solid rgba(244, 244, 244, 0.236);
+            border-right: 1px solid rgba(244, 244, 244, 0.236);
+            pointer-events: none;
+        }
+
+        //Featured styling begins here...
+
+        .featured_projects{
+            .container{
+                width: 90%;
+                margin: 0 auto;
+               
+
+                .welcome{
+                    display: grid;
+                    place-items: center;
+                    text-align: center;
+                    margin-top: 50px;
+                    h3{
+                        margin-bottom: 0;
+                        font-size: clamp(1rem,2vw,2rem);
+                        font-family: Helvetica-thin;
+                        color: $color-primary;
+                    }
+
+                    h1{
+                        margin: 0;
+                        font-size: clamp(1rem,3vw,4.5rem);
+                        font-family: Helvetica-medium;
+                    }
+
+                    .line{
+                        width: 50px;
+                        border: solid .5px rgb(213, 213, 213);
+                        margin: 20px 0;
+
+                       
+                    }
+
+                    p{
+                        font-size: .9rem;
+                        width: 50%;
+                        line-height: 1.9;
+                    }
+                }
+
+                //Meet the Team begins here...
+                .team_container{
+                    margin-top: 30px;
+                    .container{
+                        width: 60%;
+                        margin: 0 auto;
+                        
+
+                        .heading{
+                            display: grid;
+                            place-items: center;
+
+                            h1{
+                                font-size: clamp(1rem,3vw,3rem);
+                                font-family: Helvetica-medium;
+                                margin-bottom: 20px;
+
+                            }
+
+                            .line{
+                                width: 100px;
+                                border-top: solid .5px rgb(168, 168, 168);
+                                margin-bottom:30px ;
+                            }
+                        }
+
+                        .team_flexbox{
+                            display: flex;
+                            justify-content: center;
+                            gap: 2rem;
+                            
+                            .flex{
+                                width: 40%;
+
+                                img{
+                                    width: 100%;
+                                }
+
+                                p{
+                                    &:nth-child(2){
+                                        font-family: $helevetica-medium;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    &:nth-child(3){
+                                        font-size: .8rem;
+                                        font-family: $helevetica-light;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        .button_holder{
+                            display: grid;
+                            place-items: center;
+                            margin-top: 50px;
+                            button{
+                                @include buttonStyle();
+                            }
+                        }
+
+                       
+                    }
+                }
+
+      
+
+                .latest_project{
+                    margin-top: 100px;
+                  .flexbox{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .flex{
+                        &:nth-child(1){
+                            width: 30%;
+
+                            h1{
+                                font-size: clamp(1rem,2.5vw,2.2rem);
+                                width: 70%;
+                                color: $color-primary;
+                                font-family: $helevetica-light;
+                                margin-top: 0;
+                                line-height: 1.3;
+                            }
+
+                            p{
+                                line-height: 1.7;
+                                font-size: .9rem;
+                            }
+
+                            button{
+                                @include buttonStyle();
+                            }
+                        }
+                        &:nth-child(2){
+                            width: 60%;
+                            display: grid;
+                            place-items: center;
+                           
+
+                            .corousel{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                            
+
+                                .viewport{
+                                    width: 100%;
+                                    overflow: hidden;
+                                    .image_trey{
+                                        display: flex;
+                                        gap: 40px;
+                                        transition: .5s;
+                                        
+                                        a{
+                                            width: 50%;
+                                            flex: none;
+                                            text-decoration: none;
+                                        }
+
+                                        .project{
+                                            width: 100%;
+                                            height: 40vh;
+                                            //backgrund-color: red;
+                                            flex: none;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-between;
+
+                                            img{
+                                                width: 100%;
+                                                height: 80%;
+                                                object-fit: cover;
+                                            }
+
+                                            p{
+                                                margin: 0;
+
+                                               
+                                                
+                                                &:nth-child(2){
+                                                    font-size: 1.1rem;
+                                                    font-family: $helevetica-medium;
+                                                    color:rgb(72, 72, 72) ;
+                                                }
+
+                                                &:nth-child(3){
+                                                    font-size: .7rem;
+                                                    color: $color-primary;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .featured_mini_nav{
+                                margin-top: 50px;
+                                width: 70px;
+                                height: 30px;
+                                background-color: rgba(28, 28, 28, 0.902);
+                                border: solid 1px gray;
+                                border-radius: 30px;
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                
+
+                                .circle{
+                                    width: 5px;
+                                    height: 5px;
+                                    border: 1px solid gray;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transition: .5s;
+
+                                    &:nth-child(1){
+                                        background-color: white;
+                                        width: 10px;
+                                        height: 10px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                  }  
+                }
+
+                .featured_content{
+                    margin-top: 50px;
+                    .flexbox{
+                        display: flex;
+                        gap: 130px;
+
+                        h1{
+                            width: 90%;
+                            font-size: clamp(.8rem,2.5vw,2rem);
+                            font-family: $helevetica-medium;
+                        }
+
+                        p{
+                            line-height: 1.8;
+                            font-size: .95rem;
+                        }
+                    }
+                }
+            }
+        }
+
+                  //Service styles begins here...
+                  .service{
+                    background-color: rgba(230, 230, 230, 0.227);
+                    margin: 70px 0;
+                    padding: 50px 0;
+                    .container{
+                        width: 65%;
+
+                        .heading{
+                            display: grid;
+                            place-items: center;
+
+                            h1{
+                                font-size: clamp(1rem,3vw,3rem);
+                                margin-bottom: 20px;
+                                margin-top: 20px;
+                                font-family: $helevetica-bold;
+                            }
+
+                            .line{
+                                width: 100px;
+                                border-top: 1px solid rgba(176, 176, 176, 0.809);
+                          
+                            }
+                        }
+
+                        .service_flexbox{
+                            display: flex;
+                            gap: 2rem;
+                            margin-top: 50px;
+                            .flex{
+                                width: 50%;
+                                background-color: $color-primary;
+                                color: white;
+
+                                .service_image{
+                                    position: relative;
+                                    .border_overlay{
+                                        width: 90%;
+                                        height: 87%;
+                                        border: 1px solid rgba(255, 255, 255, 0.555);
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+
+                                    img{
+                                        width: 100%;
+                                        height: 40dvh;
+                                        object-fit: cover;
+                                    }
+                                }
+
+                                .service_info{
+                                    padding: 20px 50px;
+                                    
+                                    h1{
+                                        font-family: $helevetica-bold;
+                                        font-size: clamp(1rem,2vw,1.3rem);
+                                    }
+
+                                    p{
+                                        font-size: .9rem;
+                                    }
+                                }
+
+                               
+                            }
+                        }
+
+                        .content{
+                           
+                            width: 60%;
+                            margin: 0px auto;
+                            text-align: center;
+
+                            p{
+                                margin-top: 70px;
+                                line-height: 1.7;
+                            }
+
+                            button{
+                                @include buttonStyle();
+                                margin-top: 50px;
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+                }
+
+         //Breaker styling begins here...
+
+        .breaker{
+            width: 95%;
+            margin: 0 auto;
+            height: 80vh;
+            margin-top: 80px;
+
+            background-image: url(../images/breaker.webp);
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        //Services styling begins here...
+        .services{
+            width: 100%;
+            height: 150vh;
+            background-image: url(../images/projects_backgrounf@2x.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+            .arrows_container{
+                width: 95%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                img{
+                    width: 6%;
+                    
+                    transition: .3s;
+
+                    &:hover{
+                        transform: scale(1.2);
+                        cursor: pointer;
+                    }
+
+                    &:first-child{
+                        transform: scale(-1);
+
+                        &:hover{
+                            transform: scale(-1.2);
+                            cursor: pointer;
+                        }
+                    }
+
+                    
+                }
+            }
+
+            .container{
+                width: 80%;
+                height: inherit;
+                margin: 0 auto;
+                position: relative;
+
+                .title{
+                    position: absolute;
+                    top: 20%;
+                    transform: translateY(-20%);
+
+                    h1{
+                        font-size: clamp(1rem,2.5vw,2.2rem);
+                        margin: 0;
+                        font-family: $helevetica-medium;
+                        font-weight: 200;
+                        color: $color-primary;
+                    }
+
+                    p{
+                        margin: 0;
+                        width:max(300px,20%);
+                        margin-top: 10px;
+                        font-size: .9rem;
+                        line-height: 1.7;
+                    }
+                }
+
+                
+
+                .service{
+                    position:absolute;
+                    top: 55%;
+                    left: 60%;
+                    transform: translate(-60%, -55%);
+
+                    h1{
+                        font-family: $helevetica-bold;
+                        color: $color-primary;
+                        font-size: clamp(1rem,2vw,2rem);
+                    }
+
+                    p{
+                       
+                            width: 80%;
+                       
+
+                        &:nth-child(3){
+                            border-bottom: 1px solid rgb(178, 178, 178);
+                            padding-bottom: 5px;
+                        }
+                    }
+
+                    
+                }
+
+                .circle_carousel{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 1000px;
+                    height: 800px;
+                   // border: 1px solid #ccc;
+                    border-radius: 50%; /* Optional: to visualize the path */
+                    margin: 50px auto;
+                  
+              
+                  .element {
+                    position: absolute;
+                    width: 300px;
+                    height: 300px;
+                    //background-color: coral;
+                    border-radius: 50%;
+                    offset-path: path('M 500 300 m -400 0 a 400 400 0 1 0 900 0 a 250 250 0 1 0 -500 0');
+                    offset-rotate: 0deg;
+                    /* Updated circular path with 200px radius centered at 250,250 */
+
+                    .service_img{
+                        width: 100%;
+                        aspect-ratio: 1 auto;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 1px solid grey;
+                        }
+
+                    }
+
+                    .content{
+                        h1{
+                            font-family: $helevetica-bold;
+                            color: $color-primary;
+                        }
+                    }
+                  
+                  }
+
+                  .element-1 { offset-distance: 80%; }
+                  .element-2 { offset-distance: 50%; }
+                  .element-3 { offset-distance: 25%; }
+                  .element-4 { offset-distance: 0%; 
+                }
+              
+                
+            }
+
+                .start {
+                    position: absolute;
+                    top: 50%;
+                    right: -30px;
+                }
+            }
+
+        }
+
+        //Foundation styling begins here...
+        .foundation{
+            margin-top: 100px;
+            .content_container{
+                width: 100%;
+                display: grid;
+                place-items: center;
+                text-align: center;
+                .content{
+                    width: 50%;
+                    display: grid;
+                    place-items: center;
+
+                    h1{
+                        font-size: clamp(1rem,3.5vw,4rem);
+                        margin: 0;
+                        color: $color-primary;
+                    }
+
+                    p{
+                        &:last-child{
+                            padding-bottom: 5px;
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+            .image_crawler{
+                overflow: hidden;
+               
+                
+                .image_trey{
+                    display: flex;
+                    width: 100%;
+                    animation: crawl 10s linear infinite forwards;
+                    @include crawler(crawl);
+                 
+                    
+                    padding-top: 100px;
+
+                    div{
+                        width: 25%;
+                       
+                        flex: none;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        
+                    }
+    
+                    
+                }
+            }
+            
+            
+        }
+
+        //Contact styling begins here...
+        .contact{
+            .contact_container{
+                display: flex;
+                border-top: 1px solid rgb(224, 224, 224);
+
+                .flex{
+                    width: 50%;
+                    display: grid;
+                    place-items: center;
+
+                    img{
+                        width: 100%;
+                    }
+
+                    .content_details{
+                        width: 50%;
+                        .contact_heading{
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+
+                            .contact_icon{
+                                width: 50px;
+
+                                img{
+                                    width: 100%;
+                                }
+                            }
+
+                            p{
+                                width: max(200px,5%);
+                                span{
+                                    font-size: .8rem;
+                                    color: $color-primary;
+                                }
+                            }
+                        }
+
+                        form{
+                            input,textarea{
+                             
+                                box-sizing: border-box;
+                                all: unset;
+                                border-bottom: solid 1px rgb(199, 199, 199);
+                                width: 100%;
+                                outline: none;
+                            }
+
+                            label{
+                                font-size: .9rem;
+                                color: $color-primary;
+                            }
+
+                           
+
+                            .submit_button{
+                                width: 100%;
+                                display: grid;
+                                place-items: center;
+
+                                input[type='submit']{
+                                    border: none;
+                                    width: fit-content;
+                                    background-color: $color-primary;
+                                    color: white;
+                                    font-weight: bold;
+                                    padding: 15px 20px;
+                                    margin-top: 50px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Footer styling begins here...
+        .footer{
+            background-color: #1A1A1A;
+            color: grey;
+
+            .container{
+                width: 70%;
+                margin: auto;
+                display: flex;
+                padding: 50px 0;
+                gap: 50px;
+
+                .flex{
+                    width: 50%;
+                    position: relative;
+
+                    .content{
+                        font-size: .9rem;
+                        line-height: 2;
+                    }
+
+                    &:first-child{
+                       .copyright{
+                        position: absolute;
+                        bottom: 0;
+                        font-size: .7rem;
+                        margin-bottom: 0;
+                       }
+                    }
+
+                    &:last-child{
+                        text-align: right;
+                        p,h1{
+                            margin: 0;
+                        }
+
+                        :is(
+                            .address,
+                            .contact_number,
+                            .email_info,
+                            .socials
+                        ){
+                            margin-bottom: 20px;
+                            border-bottom: $color-primary solid 1px;
+                            p{
+                                font-size: .8rem;
+                            }
+
+                            h1{
+                                margin: 10px 0;
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        .socials{
+                            border:none ;
+                            margin-top: 50px;
+                            margin-bottom: 0;
+                            div{
+                                display: flex;
+                                gap: 50px;
+                                justify-content: flex-end;
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
