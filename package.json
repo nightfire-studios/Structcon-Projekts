@@ -2,10 +2,10 @@
   "name": "structcon-projekts-",
   "version": "1.0.0",
   "description": "An contruction company aimed at satisfying all your building needs",
-  "source": "index.html",
+  "source": "src/index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "parcel",
+    "build": "parcel build"
   },
   "keywords": [
     "structcon",
