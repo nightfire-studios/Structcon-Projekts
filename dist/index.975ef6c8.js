@@ -604,6 +604,7 @@ try {
     (0, _projectsJs.projectCarausel)();
     (0, _projectsJs.galleryCarousel)();
     (0, _projectsJs.intersetion_observer)();
+    (0, _projectsJs.quickNav)();
 } catch (error) {
     console.error("Error in pc:", error);
 }
@@ -5021,6 +5022,9 @@ parcelHelpers.export(exports, "projectFunctions", ()=>projectFunctions);
 parcelHelpers.export(exports, "projectCarausel", ()=>projectCarausel);
 parcelHelpers.export(exports, "galleryCarousel", ()=>galleryCarousel);
 parcelHelpers.export(exports, "intersetion_observer", ()=>intersetion_observer);
+parcelHelpers.export(exports, "quickNav", ()=>quickNav);
+var _gsap = require("gsap");
+var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 const project_trey = document.querySelector(".project_viewport");
 const projects = document.querySelectorAll(".project");
 const project_count = document.querySelector(".project_count");
@@ -5163,8 +5167,28 @@ const intersetion_observer = ()=>{
         observer.observe(items);
     });
 };
+const quickNav = ()=>{
+    //Quick navigation menu begins here...
+    const main_navigation_content = document.querySelector(".main_navigation_content");
+    const quick_nav_button = document.querySelector(".quick_nav_button");
+    var toggle = false;
+    quick_nav_button.onclick = ()=>{
+        if (toggle = !toggle) (0, _gsapDefault.default).to(main_navigation_content, {
+            display: "flex",
+            opacity: 1
+        });
+        else (0, _gsapDefault.default).to(main_navigation_content, {
+            opacity: 0,
+            onComplete: ()=>{
+                (0, _gsapDefault.default).to(main_navigation_content, {
+                    display: "none"
+                });
+            }
+        });
+    };
+};
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jybPZ":[function(require,module,exports) {
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jybPZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "personnelFunction", ()=>personnelFunction);
@@ -5188,6 +5212,8 @@ var _interiorJpeg = require("./images/personnel/interior.jpeg");
 var _interiorJpegDefault = parcelHelpers.interopDefault(_interiorJpeg);
 var _civilEngineerJpg = require("./images/personnel/civil_engineer.jpg");
 var _civilEngineerJpgDefault = parcelHelpers.interopDefault(_civilEngineerJpg);
+var _gsap = require("gsap");
+var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 const personnelFunction = ()=>{
     const personnel_container = document.querySelector(".personnel_container");
     const associates = document.querySelector(".associates");
@@ -5313,7 +5339,7 @@ const personnelFunction = ()=>{
     });
 };
 
-},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personnel/mep.jpeg":"aOiYX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL"}],"6FgSq":[function(require,module,exports) {
+},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personnel/mep.jpeg":"aOiYX","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL","gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FgSq":[function(require,module,exports) {
 module.exports = require("d6e7b0beee47aa23").getBundleURL("bLxZJ") + "managing_director.e0e94582.webp" + "?" + Date.now();
 
 },{"d6e7b0beee47aa23":"lgJ39"}],"lgJ39":[function(require,module,exports) {

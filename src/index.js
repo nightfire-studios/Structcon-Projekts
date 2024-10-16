@@ -1,7 +1,7 @@
 import {gsap} from "gsap";
 import {navHover} from './nav_menus.js'
 import {carousel} from './carousel.js'
-import {galleryCarousel, projectCarausel, projectFunctions,intersetion_observer} from './projects.js'
+import {galleryCarousel, projectCarausel, projectFunctions,intersetion_observer, quickNav} from './projects.js'
 import {personnelFunction} from './about.js'
 
 
@@ -27,6 +27,7 @@ try {
   projectCarausel() 
   galleryCarousel()
   intersetion_observer()
+  quickNav()
 
 } catch (error) {
   console.error('Error in pc:', error);
