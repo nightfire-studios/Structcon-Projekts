@@ -50,6 +50,7 @@ $helevetica-bold:Helvetica-bold;
 @import url(../css/grace.scss);
 @import url(../css/about.scss);
 
+
 // custom scrollbar//
 /* width */
 ::-webkit-scrollbar {
@@ -108,7 +109,7 @@ body{
                             }
                         }
 
-                        &:last-child{
+                        &:nth-child(2){
                             flex-grow: 1;
                             display: grid;
                             place-items: end;
@@ -150,6 +151,10 @@ body{
                                    
                                 }
                             }
+                        }
+
+                        &:nth-child(3){
+                            display: none;
                         }
                     }
                 }
@@ -241,6 +246,10 @@ body{
                             }
                         }
                         
+                    }
+
+                    .mobile_banner_caption{
+                        display: none;
                     }
 
                     .design_build{
@@ -372,7 +381,7 @@ body{
 
                     h1{
                         margin: 0;
-                        font-size: clamp(1rem,3vw,4.5rem);
+                        font-size: clamp(1.4rem,3vw,4.5rem);
                         font-family: Helvetica-medium;
                     }
 
@@ -404,7 +413,7 @@ body{
                             place-items: center;
 
                             h1{
-                                font-size: clamp(1rem,3vw,3rem);
+                                font-size: clamp(1.3rem,3vw,3rem);
                                 font-family: Helvetica-medium;
                                 margin-bottom: 20px;
 
@@ -471,7 +480,7 @@ body{
                             width: 30%;
 
                             h1{
-                                font-size: clamp(1rem,2.5vw,2.2rem);
+                                font-size: clamp(1.3rem,2.5vw,2.2rem);
                                 width: 70%;
                                 color: $color-primary;
                                 font-family: $helevetica-light;
@@ -619,7 +628,7 @@ body{
                             place-items: center;
 
                             h1{
-                                font-size: clamp(1rem,3vw,3rem);
+                                font-size: clamp(1.3rem,3vw,3rem);
                                 margin-bottom: 20px;
                                 margin-top: 20px;
                                 font-family: $helevetica-bold;
@@ -1057,7 +1066,7 @@ body{
 
                             h1{
                                 margin: 10px 0;
-                                font-size: 1.2rem;
+                                font-size: clamp(1rem,2vw,1.2rem)
                             }
                         }
 
@@ -1071,6 +1080,10 @@ body{
                                 justify-content: flex-end;
                                 font-size: .9rem;
                             }
+
+                            .mobile_copyright{
+                                display: none
+                            }
                         }
                     }
                 }
@@ -1080,3 +1093,5 @@ body{
 
 
 }
+
+@import url(../css/media_queries.scss);

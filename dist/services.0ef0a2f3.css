@@ -1,0 +1,549 @@
+@font-face {
+  font-family: Helvetica-bold;
+  src: url("HelveticaNeueBold.6b7b4b3c.otf");
+}
+
+@font-face {
+  font-family: Helvetica-medium;
+  src: url("HelveticaNeueMedium.5d88f616.otf");
+}
+
+@font-face {
+  font-family: Helvetica-light;
+  src: url("HelveticaNeueLight.d8d113bc.otf");
+}
+
+@font-face {
+  font-family: Helvetica-thin;
+  src: url("HelveticaNeueThin.a192f3bc.otf");
+}
+
+.service_container .service_banner {
+  background: url("service_banner.56b14640.webp") center / cover;
+  width: 100%;
+  height: 92vh;
+  position: relative;
+}
+
+.service_container .service_banner .overlay {
+  width: inherit;
+  height: inherit;
+  background-image: linear-gradient(to top, #000, #0000, #0000);
+  position: absolute;
+}
+
+.service_container .service_banner .overlay:nth-child(2) {
+  width: inherit;
+  height: inherit;
+  opacity: .6;
+  background-image: linear-gradient(to top, #000000c5, #0000, #0000);
+  transform: scaleY(-1);
+}
+
+.service_container .service_banner .color_overlay {
+  mix-blend-mode: color;
+  z-index: 0;
+  background-color: #d9592f;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.service_container .service_banner .service_banner_text {
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  top: 80%;
+  left: 5%;
+}
+
+.service_container .service_banner .service_banner_text .first_text {
+  width: 80%;
+}
+
+.service_container .service_banner .service_banner_text .first_text h1 {
+  color: #f05f0c;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 3vw, 3rem);
+}
+
+.service_container .service_banner .service_banner_text .first_text p {
+  color: #fff;
+  text-align: left;
+  margin-top: 0;
+}
+
+.service_container .service_banner .service_banner_text .second_text {
+  margin-top: 20px;
+}
+
+.service_container .service_banner .service_banner_text .second_text p {
+  color: #fff;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.service_container .container {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.service_container .container .service_flexbox {
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  display: grid;
+}
+
+.service_container .container .service_flexbox .service_flex {
+  background-color: #d9592f;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  display: flex;
+}
+
+.service_container .container .service_flexbox .service_flex .content {
+  color: #fff;
+  width: 40%;
+  padding: 0 50px;
+}
+
+.service_container .container .service_flexbox .service_flex .content h1 {
+  font-family: Helvetica-bold;
+}
+
+.service_container .container .service_flexbox .service_flex .content p {
+  font-size: .9rem;
+}
+
+.service_container .container .service_flexbox .service_flex .img {
+  width: 70%;
+  height: 40vh;
+}
+
+.service_container .container .service_flexbox .service_flex .img img {
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.service_container .text_container {
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 120px auto auto;
+  display: flex;
+}
+
+.service_container .text_container .div1 {
+  width: 25%;
+}
+
+.service_container .text_container .div1 h1 {
+  text-align: left;
+  color: #d9592f;
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 3rem);
+}
+
+.service_container .text_container .div2 {
+  width: 65%;
+}
+
+.service_container .text_container .div2 p {
+  text-align: left;
+  color: #545454;
+  border-left: 1px solid #d0d0d0;
+  padding-left: 50px;
+  font-size: .95rem;
+  line-height: 2;
+}
+
+.service_container .designs_div {
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 150px auto auto;
+  display: flex;
+}
+
+.service_container .designs_div .design_text {
+  width: 30%;
+  height: 300px;
+}
+
+.service_container .designs_div .design_text p {
+  text-align: left;
+  width: 90%;
+  margin-top: 0;
+  font-family: Helvetica-light;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.service_container .designs_div a {
+  color: #000;
+  width: 30%;
+  text-decoration: none;
+}
+
+.service_container .designs_div a .design_img .filter_overlay {
+  mix-blend-mode: color;
+  opacity: .5;
+  background-color: #d9592f;
+  width: 100%;
+  height: 100%;
+}
+
+.service_container .designs_div a .design_image_div1 .design_img {
+  background-image: url("service_1.02c388a0.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .designs_div a .design_image_div1 .design_details {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.service_container .designs_div a .design_image_div1 .design_details .details_for_design {
+  width: 87%;
+}
+
+.service_container .designs_div a .design_image_div1 .design_details .details_for_design h3 {
+  text-align: left;
+  color: #d9592f;
+  margin: 35px 0 10px;
+}
+
+.service_container .designs_div a .design_image_div1 .design_details .details_for_design p {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(.6rem, 1vw, .8rem);
+}
+
+.service_container .designs_div a .design_image_div1 .design_details .detail_arrow {
+  width: 10%;
+}
+
+.service_container .designs_div a .design_image_div1 .design_details .detail_arrow img {
+  width: 100%;
+}
+
+.service_container .designs_div a .design_image_div2 .design_img {
+  background-image: url("service_2.b467bca1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .designs_div a .design_image_div2 .design_details {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.service_container .designs_div a .design_image_div2 .design_details .details_for_design {
+  width: 87%;
+}
+
+.service_container .designs_div a .design_image_div2 .design_details .details_for_design h3 {
+  text-align: left;
+  color: #d9592f;
+  margin: 35px 0 10px;
+}
+
+.service_container .designs_div a .design_image_div2 .design_details .details_for_design p {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(.6rem, 1vw, .8rem);
+}
+
+.service_container .designs_div a .design_image_div2 .design_details .detail_arrow {
+  width: 10%;
+}
+
+.service_container .designs_div a .design_image_div2 .design_details .detail_arrow img {
+  width: 100%;
+}
+
+.service_container .construction_div {
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 150px auto auto;
+  display: flex;
+}
+
+.service_container .construction_div a {
+  color: #000;
+  width: 30%;
+  text-decoration: none;
+}
+
+.service_container .construction_div a .design_img .filter_overlay {
+  mix-blend-mode: color;
+  opacity: .5;
+  background-color: #d9592f;
+  width: 100%;
+  height: 100%;
+}
+
+.service_container .construction_div a .design_image_div3 .design_img {
+  background-image: url("project3.19cc88d7.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .construction_div a .design_image_div3 .design_details {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.service_container .construction_div a .design_image_div3 .design_details .details_for_design {
+  width: 87%;
+}
+
+.service_container .construction_div a .design_image_div3 .design_details .details_for_design h3 {
+  text-align: left;
+  color: #d9592f;
+  margin: 35px 0 10px;
+}
+
+.service_container .construction_div a .design_image_div3 .design_details .details_for_design p {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(.6rem, 1vw, .8rem);
+}
+
+.service_container .construction_div a .design_image_div3 .design_details .detail_arrow {
+  width: 10%;
+}
+
+.service_container .construction_div a .design_image_div3 .design_details .detail_arrow img {
+  width: 100%;
+}
+
+.service_container .construction_div a .design_image_div4 .design_img {
+  background: url("service_5.0e01ca4d.webp") 0 0 / cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .construction_div a .design_image_div4 .design_details {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.service_container .construction_div a .design_image_div4 .design_details .details_for_design {
+  width: 87%;
+}
+
+.service_container .construction_div a .design_image_div4 .design_details .details_for_design h3 {
+  text-align: left;
+  color: #d9592f;
+  margin: 35px 0 10px;
+  font-size: clamp(1rem, 1vw, 1rem);
+}
+
+.service_container .construction_div a .design_image_div4 .design_details .details_for_design p {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(.6rem, 1vw, .8rem);
+}
+
+.service_container .construction_div a .design_image_div4 .design_details .detail_arrow {
+  width: 10%;
+}
+
+.service_container .construction_div a .design_image_div4 .design_details .detail_arrow img {
+  width: 100%;
+}
+
+.service_container .construction_div a .design_image_div5 .design_img {
+  background-image: url("service_4.936d80d3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid gray;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .construction_div a .design_image_div5 .design_details {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+.service_container .construction_div a .design_image_div5 .design_details .details_for_design {
+  width: 87%;
+}
+
+.service_container .construction_div a .design_image_div5 .design_details .details_for_design h3 {
+  text-align: left;
+  color: #d9592f;
+  margin: 35px 0 10px;
+}
+
+.service_container .construction_div a .design_image_div5 .design_details .details_for_design p {
+  text-align: left;
+  margin: 0;
+  font-size: clamp(.6rem, 1vw, .8rem);
+}
+
+.service_container .construction_div a .design_image_div5 .design_details .detail_arrow {
+  width: 10%;
+}
+
+.service_container .construction_div a .design_image_div5 .design_details .detail_arrow img {
+  width: 100%;
+}
+
+.service_container .banner_flex {
+  width: 33%;
+  height: 40dvh;
+}
+
+.service_container .explore_div {
+  text-align: left;
+  margin-top: 250px;
+}
+
+.service_container .explore_div h1 {
+  text-align: center;
+  color: #d9592f;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.service_container .explore_div p {
+  text-align: center;
+  margin-top: 0;
+  font-size: 12px;
+}
+
+.service_container .gradient_flex {
+  width: 60%;
+  margin: 35px auto auto;
+}
+
+.service_container .gradient_flex p {
+  border-bottom: 1px solid #80808041;
+}
+
+.service_container .banner_last_img {
+  justify-content: space-between;
+  gap: 15px;
+  width: 75%;
+  margin: 40px auto 200px;
+  display: flex;
+}
+
+.service_container .banner_last_img a {
+  color: #000;
+  width: 30%;
+  text-decoration: none;
+}
+
+.service_container .banner_last_img a .project_view1 .project_view_img {
+  background-image: url("project1.f6a2e655.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .banner_last_img a .project_view1 .text_in_project h4 {
+  text-align: left;
+  color: #d9592f;
+  margin-bottom: 0;
+  font-family: Helvetica-bold;
+}
+
+.service_container .banner_last_img a .project_view1 .text_in_project p {
+  text-align: left;
+  font-size: .8rem;
+}
+
+.service_container .banner_last_img a .project_view2 .project_view_img {
+  background-image: url("project3.19cc88d7.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .banner_last_img a .project_view2 .text_in_project h4 {
+  text-align: left;
+  color: #d9592f;
+  margin-bottom: 0;
+  font-family: Helvetica-bold;
+}
+
+.service_container .banner_last_img a .project_view2 .text_in_project p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.service_container .banner_last_img a .project_view3 .project_view_img {
+  background-image: url("render_1.3101cfd4.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .banner_last_img a .project_view3 .text_in_project h4 {
+  text-align: left;
+  color: #d9592f;
+  margin-bottom: 0;
+  font-family: Helvetica-bold;
+}
+
+.service_container .banner_last_img a .project_view3 .text_in_project p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.service_container .banner_last_img a .project_view4 .project_view_img {
+  background-image: url("render_1.ae2c50af.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.service_container .banner_last_img a .project_view4 .text_in_project h4 {
+  text-align: left;
+  color: #d9592f;
+  margin-bottom: 0;
+  font-family: Helvetica-bold;
+}
+
+.service_container .banner_last_img a .project_view4 .text_in_project p {
+  text-align: left;
+  font-size: 14px;
+}
+/*# sourceMappingURL=services.0ef0a2f3.css.map */

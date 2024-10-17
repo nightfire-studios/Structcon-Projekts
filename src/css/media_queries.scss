@@ -1,0 +1,246 @@
+$color-primary: #D9592F;
+
+@media screen and (max-width:500px) {
+    body {
+
+        section {
+
+            .balance{
+                height: 65vh !important;
+            }
+
+            //Nav
+            nav {
+                .container {
+                    width: 100% !important;
+
+                    .flexbox {
+                        justify-content: space-between;
+                        .flex {
+                            &:nth-child(1) {
+                                width: 50% !important;
+                                padding: 15px 0;
+
+                                .logo_container {
+                                    display: grid;
+                                    place-items: center;
+                                    padding-left: 20px;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                display: none !important;
+                            }
+
+                            &:nth-child(3) {
+                                display: block !important;
+                                .mobile_menu {
+                                    width: 100px;
+                                    height: max(80px,10vh);
+                                    background-color: $color-primary;
+                                    display: grid;
+                                    place-items: center;
+                                    cursor: pointer;
+
+                                    .line_holder{
+                                        width: 50%;
+                                        .line{
+                                            width: 100%;
+                                            border: solid .5px white;
+                                            margin-top: 15px;
+
+                                            &:first-child{
+                                                margin-top: 0;
+                                            }
+                                        }
+                                    }
+
+                                   
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            //Footer
+            .footer {
+                .container {
+                    flex-direction: column;
+                }
+
+            }
+
+            //Banner
+            .banner{
+                .banner_footer{
+                    .banner_navigation{
+                        
+                        
+                        .design_build{
+                            display: none !important;
+                            h2{
+                                margin-left: 0 !important;
+                            }
+                        }
+
+                        .mobile_banner_caption{
+                            display: block !important;
+
+                            h2{
+                                font-size: 1.7rem !important;
+                                line-height: 1.7;
+                            }
+                        }
+
+                        .construction_management,.interior_design{
+                           display: none !important;
+                        }
+                    }
+
+                    .flexbox{
+                        .flex{
+                            .mini_nav{
+                                display: none !important;
+                            }
+
+                            p{
+                                font-size: clamp(0.5rem, 1vw, .8rem) !important;
+                            }
+                        }
+
+                        .flex:nth-child(3){
+                            display: none ;
+                        }
+                    }
+                }
+            }
+
+            //featured projects
+            .featured_projects{
+                .container{
+                    .welcome{
+
+                        p{
+                            width: 100% !important;
+                        }
+                    }
+
+                    .team_container{
+                        .container{
+                            width: 100% !important;
+                        }
+                    }
+
+                    .latest_project{
+                        .flexbox{
+                            flex-direction: column-reverse;
+
+                            .flex{
+                                width: 100% !important;
+
+                                h1{
+                                    margin-top: 40px !important;
+                                }
+
+                                .corousel{
+                                    .viewport{
+                                        .image_trey{
+                                            flex-direction: column;
+                                            a{
+                                                width: 100% !important;
+                                                border-bottom: 1px solid rgb(209, 209, 209);
+                                                padding-bottom: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .featured_content{
+                        .flexbox{
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            //service
+            .service{
+                .container{
+                    width: 90% !important;
+
+                    .service_flexbox{
+                        flex-direction: column;
+
+                        .flex{
+                            width: 100% !important;
+                        }
+                    }
+
+                    .content{
+                        width: 100% !important;
+                        font-size: .9rem;
+                    }
+                }
+            }
+
+            //breaker
+            .breaker{
+                display: none;
+            }
+
+            //Foundation
+            .foundation{
+                .content_container{
+                    .content{
+                        width: 75% !important;
+                    }
+                }
+            }
+
+            //Contact
+            .contact{
+                .contact_container{
+                    flex-direction: column;
+
+                    .flex{
+                        width: 100% !important;
+
+                        .content_details{
+                            width: 80% !important;
+                            padding: 40px 0;
+                            .contact_heading{
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //Footer
+            .footer{
+                .container{
+                    width: 80% !important;
+                    .flex{
+                        width: 100% !important;
+
+                        .copyright{
+                            display: none;
+                        }
+
+                        .mobile_copyright{
+                            display: block !important;
+                            line-height: 4;
+                            font-size: .7rem !important;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

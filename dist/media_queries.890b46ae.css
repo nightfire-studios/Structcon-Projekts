@@ -1,0 +1,24 @@
+@media screen and (width <= 500px) {
+  body section nav .container {
+    width: 100%;
+  }
+
+  body section nav .container .flexbox .flex:first-child {
+    padding: 25px 0;
+    width: 35% !important;
+  }
+
+  body section nav .container .flexbox .flex:first-child .logo_container {
+    place-items: center;
+    display: grid;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(2) {
+    display: none !important;
+  }
+
+  body section .footer .container {
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=media_queries.890b46ae.css.map */

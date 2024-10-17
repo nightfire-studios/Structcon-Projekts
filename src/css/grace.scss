@@ -216,6 +216,10 @@ $helevetica-bold:Helvetica-bold;
         }
     }
 
+    .grace_carousel,.grace_gallery{
+        display: none !important;
+    }
+
     //Project content begins here..
     .project_content{
         margin: 10rem 0;
