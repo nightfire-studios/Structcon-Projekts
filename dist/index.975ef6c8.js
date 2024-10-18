@@ -5359,7 +5359,7 @@ const personnelFunction = ()=>{
     });
 };
 
-},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personneL/quantity_survayor.jpeg":"0hiEH","./images/personnel/mep.jpeg":"aOiYX","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FgSq":[function(require,module,exports) {
+},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personneL/quantity_survayor.jpeg":"0hiEH","./images/personnel/mep.jpeg":"aOiYX","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL","gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FgSq":[function(require,module,exports) {
 module.exports = require("d6e7b0beee47aa23").getBundleURL("bLxZJ") + "managing_director.e0e94582.webp" + "?" + Date.now();
 
 },{"d6e7b0beee47aa23":"lgJ39"}],"lgJ39":[function(require,module,exports) {
