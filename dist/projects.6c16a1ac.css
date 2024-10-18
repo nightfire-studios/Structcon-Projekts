@@ -1,0 +1,220 @@
+@font-face {
+  font-family: Helvetica-bold;
+  src: url("HelveticaNeueBold.6b7b4b3c.otf");
+}
+
+@font-face {
+  font-family: Helvetica-medium;
+  src: url("HelveticaNeueMedium.5d88f616.otf");
+}
+
+@font-face {
+  font-family: Helvetica-light;
+  src: url("HelveticaNeueLight.d8d113bc.otf");
+}
+
+@font-face {
+  font-family: Helvetica-thin;
+  src: url("HelveticaNeueThin.a192f3bc.otf");
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.project_container {
+  border-bottom: 1px solid #b5b5b57f;
+  height: 90vh;
+}
+
+.project_container .container {
+  height: inherit;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project_container .container .project_flexbox {
+  height: inherit;
+  display: flex;
+}
+
+.project_container .container .project_flexbox .project_details {
+  border-right: 1px solid #b5b5b57f;
+  place-items: center;
+  width: 40%;
+  display: grid;
+}
+
+.project_container .container .project_flexbox .project_details .container h1 {
+  color: #d9592f;
+  width: max(200px, 30vw);
+  margin-bottom: 0;
+  font-family: Helvetica-medium;
+  font-size: clamp(1rem, 3vw, 3.5rem);
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+.project_container .container .project_flexbox .project_details .container h2 {
+  font-family: Helvetica-medium;
+}
+
+.project_container .container .project_flexbox .project_details .container .description {
+  color: #5c5c5c;
+  font-size: .8rem;
+  line-height: 1.7;
+}
+
+.project_container .container .project_flexbox .project_details .container h3 {
+  border-bottom: 1px solid #b5b5b57f;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  font-family: Helvetica-medium;
+}
+
+.project_container .container .project_flexbox .project_details .container .project_summary {
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  display: grid;
+}
+
+.project_container .container .project_flexbox .project_details .container .project_summary .flex {
+  width: 100%;
+}
+
+.project_container .container .project_flexbox .project_details .container .project_summary .flex p {
+  color: gray;
+  margin-bottom: 0;
+  font-size: .8rem;
+}
+
+.project_container .container .project_flexbox .project_details .container .project_summary .flex h4 {
+  width: 100%;
+  margin-top: 10px;
+  font-family: Helvetica-medium;
+}
+
+.project_container .container .project_flexbox .project_details .container .learn_more {
+  font-size: .8rem;
+}
+
+.project_container .container .project_flexbox .project_images {
+  height: inherit;
+  place-items: end;
+  width: 60%;
+  display: grid;
+  position: relative;
+}
+
+.project_container .container .project_flexbox .project_images .container {
+  margin: 0;
+  overflow: hidden;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport {
+  scroll-snap-type: y mandatory;
+  flex-direction: column;
+  gap: 2rem;
+  height: 90vh;
+  margin-top: 50px;
+  display: flex;
+  overflow-y: auto;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project {
+  scroll-snap-align: start;
+  background-color: red;
+  flex: none;
+  place-items: center;
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  position: relative;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project .overlay {
+  width: inherit;
+  height: inherit;
+  opacity: .7;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  background-image: linear-gradient(to top, #000, #0000);
+  position: absolute;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project button {
+  all: unset;
+  color: #fff;
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 10px 40px;
+  transition: all .3s;
+  position: relative;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project button:hover {
+  color: #000;
+  background-color: #fff;
+  padding: 20px 55px;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project_1 {
+  background: url("project1.f6a2e655.webp") 0 0 / cover;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project_2 {
+  background: url("render_1.3101cfd4.webp") 0 0 / cover;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project_3 {
+  background: url("render_1.4a583fbc.webp") 0 0 / cover;
+}
+
+.project_container .container .project_flexbox .project_images .container .project_viewport .project_4 {
+  background: url("render_1.ae2c50af.webp") 0 0 / cover;
+}
+
+.project_container .container .project_flexbox .project_images .container .images_footer {
+  width: inherit;
+  z-index: 5;
+  background-image: linear-gradient(to top, #fff, #0000);
+  place-items: center;
+  height: 15vh;
+  display: grid;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.project_container .container .project_flexbox .project_images .container .images_footer .line {
+  text-align: center;
+}
+
+.project_container .container .project_flexbox .project_images .container .images_footer .line h1 {
+  margin: 0;
+}
+
+.project_container .container .project_flexbox .project_images .container .images_footer .line h1 span {
+  font-family: Helvetica-bold;
+  font-weight: bolder;
+}
+
+.project_container .container .project_flexbox .project_images .container .images_footer .line p {
+  margin: 0;
+}
+
+.project_contact .contact_container .project_flex1 {
+  width: 41% !important;
+}
+
+.project_contact .contact_container .project_flex1 img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.project_contact .contact_container .project_flex2 {
+  width: 59% !important;
+}
+/*# sourceMappingURL=projects.6c16a1ac.css.map */

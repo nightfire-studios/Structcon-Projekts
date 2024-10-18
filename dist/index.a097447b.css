@@ -1162,6 +1162,10 @@ a {
   height: 450px;
 }
 
+.projects_container .grace_carousel, .projects_container .grace_gallery {
+  display: none !important;
+}
+
 .projects_container .project_content {
   margin: 10rem 0;
 }
@@ -1383,6 +1387,7 @@ a {
 }
 
 .about_us_container .container .intro_content {
+  gap: 1.5rem;
   margin-top: 100px;
   display: flex;
 }
@@ -1629,7 +1634,6 @@ a {
 }
 
 .about_us_container .container .lead_personnel .personnel_container .personnel, .about_us_container .container .lead_personnel .associates .personnel {
-  border-bottom: 1px solid #dbdbdb;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
@@ -1637,13 +1641,14 @@ a {
 
 .about_us_container .container .lead_personnel .personnel_container .personnel .personnel_image, .about_us_container .container .lead_personnel .associates .personnel .personnel_image {
   width: 100%;
-  height: 40vh;
+  height: 40dvh;
   margin-top: 50px;
 }
 
 .about_us_container .container .lead_personnel .personnel_container .personnel .personnel_image img, .about_us_container .container .lead_personnel .associates .personnel .personnel_image img {
   height: inherit;
   object-fit: cover;
+  object-position: top;
   border: 1px solid #dbdbdb;
   width: 100%;
 }
@@ -1669,8 +1674,194 @@ a {
 }
 
 .about_us_container .container .lead_personnel .personnel_container .personnel .personnel_email a, .about_us_container .container .lead_personnel .associates .personnel .personnel_email a {
-  border-bottom: 1px solid gray;
   font-size: 1.8rem;
+}
+
+.about_us_container .container .lead_personnel .associates > div:first-child .name {
+  font-size: clamp(1rem, 1.5vw, 1.3rem) !important;
+}
+
+.about_us_container .container .lead_personnel .associates div:nth-child(6) img {
+  object-position: 0 -70px !important;
+}
+
+@media screen and (width <= 500px) {
+  body section .balance {
+    height: 65vh !important;
+  }
+
+  body section nav .container {
+    width: 100% !important;
+  }
+
+  body section nav .container .flexbox {
+    justify-content: space-between;
+  }
+
+  body section nav .container .flexbox .flex:first-child {
+    padding: 15px 0;
+    width: 50% !important;
+  }
+
+  body section nav .container .flexbox .flex:first-child .logo_container {
+    place-items: center;
+    padding-left: 20px;
+    display: grid;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(2) {
+    display: none !important;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(3) {
+    display: block !important;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(3) .mobile_menu {
+    cursor: pointer;
+    background-color: #d9592f;
+    place-items: center;
+    width: 100px;
+    height: max(80px, 10vh);
+    display: grid;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder {
+    width: 50%;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder .line {
+    border: .5px solid #fff;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder .line:first-child {
+    margin-top: 0;
+  }
+
+  body section .footer .container {
+    flex-direction: column;
+  }
+
+  body section .banner .banner_footer .banner_navigation .design_build {
+    display: none !important;
+  }
+
+  body section .banner .banner_footer .banner_navigation .design_build h2 {
+    margin-left: 0 !important;
+  }
+
+  body section .banner .banner_footer .banner_navigation .mobile_banner_caption {
+    display: block !important;
+  }
+
+  body section .banner .banner_footer .banner_navigation .mobile_banner_caption h2 {
+    line-height: 1.7;
+    font-size: 1.7rem !important;
+  }
+
+  body section .banner .banner_footer .banner_navigation .construction_management, body section .banner .banner_footer .banner_navigation .interior_design, body section .banner .banner_footer .flexbox .flex .mini_nav {
+    display: none !important;
+  }
+
+  body section .banner .banner_footer .flexbox .flex p {
+    font-size: clamp(.5rem, 1vw, .8rem) !important;
+  }
+
+  body section .banner .banner_footer .flexbox .flex:nth-child(3) {
+    display: none;
+  }
+
+  body section .featured_projects .container .welcome p, body section .featured_projects .container .team_container .container {
+    width: 100% !important;
+  }
+
+  body section .featured_projects .container .latest_project .flexbox {
+    flex-direction: column-reverse;
+  }
+
+  body section .featured_projects .container .latest_project .flexbox .flex {
+    width: 100% !important;
+  }
+
+  body section .featured_projects .container .latest_project .flexbox .flex h1 {
+    margin-top: 40px !important;
+  }
+
+  body section .featured_projects .container .latest_project .flexbox .flex .corousel .viewport .image_trey {
+    flex-direction: column;
+  }
+
+  body section .featured_projects .container .latest_project .flexbox .flex .corousel .viewport .image_trey a {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 20px;
+    width: 100% !important;
+  }
+
+  body section .featured_projects .container .featured_content .flexbox {
+    display: none !important;
+  }
+
+  body section .service .container {
+    width: 90% !important;
+  }
+
+  body section .service .container .service_flexbox {
+    flex-direction: column;
+  }
+
+  body section .service .container .service_flexbox .flex {
+    width: 100% !important;
+  }
+
+  body section .service .container .content {
+    font-size: .9rem;
+    width: 100% !important;
+  }
+
+  body section .breaker {
+    display: none;
+  }
+
+  body section .foundation .content_container .content {
+    width: 75% !important;
+  }
+
+  body section .contact .contact_container {
+    flex-direction: column;
+  }
+
+  body section .contact .contact_container .flex {
+    width: 100% !important;
+  }
+
+  body section .contact .contact_container .flex .content_details {
+    padding: 40px 0;
+    width: 80% !important;
+  }
+
+  body section .contact .contact_container .flex .content_details .contact_heading {
+    justify-content: center;
+  }
+
+  body section .footer .container {
+    width: 80% !important;
+  }
+
+  body section .footer .container .flex {
+    width: 100% !important;
+  }
+
+  body section .footer .container .flex .copyright {
+    display: none;
+  }
+
+  body section .footer .container .flex .mobile_copyright {
+    line-height: 4;
+    font-size: .7rem !important;
+    display: block !important;
+  }
 }
 
 @font-face {
@@ -1746,13 +1937,13 @@ body section nav .container .flexbox .flex:first-child .logo_container img {
   width: 100%;
 }
 
-body section nav .container .flexbox .flex:last-child {
+body section nav .container .flexbox .flex:nth-child(2) {
   flex-grow: 1;
   place-items: end;
   display: grid;
 }
 
-body section nav .container .flexbox .flex:last-child ul {
+body section nav .container .flexbox .flex:nth-child(2) ul {
   margin: 0;
   padding: 0;
   font-family: helvetica-light;
@@ -1760,7 +1951,7 @@ body section nav .container .flexbox .flex:last-child ul {
   display: flex;
 }
 
-body section nav .container .flexbox .flex:last-child ul a {
+body section nav .container .flexbox .flex:nth-child(2) ul a {
   cursor: pointer;
   color: #fff;
   background-color: #d9592f;
@@ -1770,18 +1961,22 @@ body section nav .container .flexbox .flex:last-child ul a {
   text-decoration: none;
 }
 
-body section nav .container .flexbox .flex:last-child ul a:first-child {
+body section nav .container .flexbox .flex:nth-child(2) ul a:first-child {
   border-left: 1px solid #dcdcdc;
 }
 
-body section nav .container .flexbox .flex:last-child ul .inactive {
+body section nav .container .flexbox .flex:nth-child(2) ul .inactive {
   color: gray;
   background-color: #fff;
 }
 
-body section nav .container .flexbox .flex:last-child ul .active {
+body section nav .container .flexbox .flex:nth-child(2) ul .active {
   color: #fff;
   background-color: #d9592f;
+}
+
+body section nav .container .flexbox .flex:nth-child(3) {
+  display: none;
 }
 
 body section .banner {
@@ -1859,6 +2054,10 @@ body section .banner .banner_footer .banner_navigation :is(.design_build, .const
 
 body section .banner .banner_footer .banner_navigation :is(.design_build, .construction_management, .interior_design) .x_img img {
   width: 100%;
+}
+
+body section .banner .banner_footer .banner_navigation .mobile_banner_caption {
+  display: none;
 }
 
 body section .banner .banner_footer .banner_navigation .design_build h2 {
@@ -1973,7 +2172,7 @@ body section .featured_projects .container .welcome h3 {
 body section .featured_projects .container .welcome h1 {
   margin: 0;
   font-family: Helvetica-medium;
-  font-size: clamp(1rem, 3vw, 4.5rem);
+  font-size: clamp(1.4rem, 3vw, 4.5rem);
 }
 
 body section .featured_projects .container .welcome .line {
@@ -2005,7 +2204,7 @@ body section .featured_projects .container .team_container .container .heading {
 body section .featured_projects .container .team_container .container .heading h1 {
   margin-bottom: 20px;
   font-family: Helvetica-medium;
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 3vw, 3rem);
 }
 
 body section .featured_projects .container .team_container .container .heading .line {
@@ -2072,7 +2271,7 @@ body section .featured_projects .container .latest_project .flexbox .flex:first-
   width: 70%;
   margin-top: 0;
   font-family: Helvetica-light;
-  font-size: clamp(1rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.3rem, 2.5vw, 2.2rem);
   line-height: 1.3;
 }
 
@@ -2214,7 +2413,7 @@ body section .service .container .heading h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: Helvetica-bold;
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(1.3rem, 3vw, 3rem);
 }
 
 body section .service .container .heading .line {
@@ -2620,7 +2819,7 @@ body section .footer .container .flex:last-child :is(.address, .contact_number, 
 
 body section .footer .container .flex:last-child :is(.address, .contact_number, .email_info, .socials) h1 {
   margin: 10px 0;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 body section .footer .container .flex:last-child .socials {
@@ -2634,5 +2833,9 @@ body section .footer .container .flex:last-child .socials div {
   gap: 50px;
   font-size: .9rem;
   display: flex;
+}
+
+body section .footer .container .flex:last-child .socials .mobile_copyright {
+  display: none;
 }
 /*# sourceMappingURL=index.a097447b.css.map */

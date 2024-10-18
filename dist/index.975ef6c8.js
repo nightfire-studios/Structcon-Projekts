@@ -5206,6 +5206,8 @@ var _projectMangerWebp = require("./images/personnel/project_manger.webp");
 var _projectMangerWebpDefault = parcelHelpers.interopDefault(_projectMangerWebp);
 var _structuralEngineerWebp = require("./images/personnel/structural-engineer.webp");
 var _structuralEngineerWebpDefault = parcelHelpers.interopDefault(_structuralEngineerWebp);
+var _quantitySurvayorJpeg = require("./images/personneL/quantity_survayor.jpeg");
+var _quantitySurvayorJpegDefault = parcelHelpers.interopDefault(_quantitySurvayorJpeg);
 var _mepJpeg = require("./images/personnel/mep.jpeg");
 var _mepJpegDefault = parcelHelpers.interopDefault(_mepJpeg);
 var _interiorJpeg = require("./images/personnel/interior.jpeg");
@@ -5263,6 +5265,18 @@ const personnelFunction = ()=>{
         //     email:'info@structconprojekts.com'
         // },
         {
+            name: "Elizabeth Nana Yaa Eyram Nongo",
+            img: (0, _profileHolderPngDefault.default),
+            position: "Associate - Principal Architect",
+            email: "info@structconprojekts.com"
+        },
+        {
+            name: "Kelvin Frimpong",
+            img: (0, _profileHolderPngDefault.default),
+            position: "Associate - Structural Engineer",
+            email: "info@structconprojekts.com"
+        },
+        {
             name: "Marco Antic",
             img: (0, _structuralEngineerWebpDefault.default),
             position: "Associate - Structural Engineer",
@@ -5271,13 +5285,19 @@ const personnelFunction = ()=>{
         {
             name: "Ing Richmond Akoliga",
             img: (0, _mepJpegDefault.default),
-            position: "MAP Engineer",
+            position: "Associate - MEP Engineer",
             email: "info@structconprojekts.com"
         },
         {
             name: "Ing Benjamin Elorm Nyonator",
             img: (0, _civilEngineerJpgDefault.default),
-            position: "Civil Engineer",
+            position: "Associate - Civil Engineer",
+            email: "info@structconprojekts.com"
+        },
+        {
+            name: "Meshach o. Ababio",
+            img: (0, _quantitySurvayorJpegDefault.default),
+            position: "Associate - Quantity Surveyor",
             email: "info@structconprojekts.com"
         },
         // {
@@ -5289,7 +5309,7 @@ const personnelFunction = ()=>{
         {
             name: "Priscilla Asare Mensah",
             img: (0, _interiorJpegDefault.default),
-            position: "Interior Designer",
+            position: "Associate - Interior Designer",
             email: "info@structconprojekts.com"
         }
     ];
@@ -5339,7 +5359,7 @@ const personnelFunction = ()=>{
     });
 };
 
-},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personnel/mep.jpeg":"aOiYX","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL","gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FgSq":[function(require,module,exports) {
+},{"./images/personnel/managing_director.webp":"6FgSq","./images/personnel/engineer.webp":"11wqI","./images/personnel/co-founder.webp":"72VfV","./images/personnel/profile_holder.png":"4EJQp","./images/personnel/construction_manager.webp":"5VRYY","./images/personnel/project_manger.webp":"4abtq","./images/personnel/structural-engineer.webp":"7lZcl","./images/personneL/quantity_survayor.jpeg":"0hiEH","./images/personnel/mep.jpeg":"aOiYX","./images/personnel/interior.jpeg":"ef8A9","./images/personnel/civil_engineer.jpg":"8KbOL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FgSq":[function(require,module,exports) {
 module.exports = require("d6e7b0beee47aa23").getBundleURL("bLxZJ") + "managing_director.e0e94582.webp" + "?" + Date.now();
 
 },{"d6e7b0beee47aa23":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -5395,7 +5415,10 @@ module.exports = require("c4677f2bda6bf0e0").getBundleURL("bLxZJ") + "project_ma
 },{"c4677f2bda6bf0e0":"lgJ39"}],"7lZcl":[function(require,module,exports) {
 module.exports = require("f78136372cc03bbe").getBundleURL("bLxZJ") + "structural-engineer.4553d720.webp" + "?" + Date.now();
 
-},{"f78136372cc03bbe":"lgJ39"}],"aOiYX":[function(require,module,exports) {
+},{"f78136372cc03bbe":"lgJ39"}],"0hiEH":[function(require,module,exports) {
+module.exports = require("9aeda436cd26ece").getBundleURL("bLxZJ") + "quantity_survayor.6cb610ca.jpeg" + "?" + Date.now();
+
+},{"9aeda436cd26ece":"lgJ39"}],"aOiYX":[function(require,module,exports) {
 module.exports = require("887d5a8d2dec2d0c").getBundleURL("bLxZJ") + "mep.886dc088.jpeg" + "?" + Date.now();
 
 },{"887d5a8d2dec2d0c":"lgJ39"}],"ef8A9":[function(require,module,exports) {
