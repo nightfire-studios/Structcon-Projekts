@@ -787,6 +787,218 @@ a {
   src: url("HelveticaNeueThin.a192f3bc.otf");
 }
 
+.main_navigation_content {
+  z-index: 3;
+  opacity: 0;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  display: none;
+  position: fixed;
+}
+
+.main_navigation_content .navigation_content-flex {
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 5%;
+}
+
+.main_navigation_content .navigation_content-flex h1 {
+  color: gray;
+  font-family: Helvetica-light;
+  font-size: clamp(2rem, 3vw, 2rem);
+  font-weight: 100;
+}
+
+.main_navigation_content .navigation_content-flex p {
+  border-left: 2px solid gray;
+  height: 3dvh;
+}
+
+.main_navigation_content .navigation_content-flex h2 {
+  color: gray;
+  font-family: Helvetica-light;
+  font-size: clamp(2rem, 3vw, 2rem);
+  font-weight: 100;
+}
+
+.main_navigation_content .navigation_content {
+  background-color: #fff;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 {
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace {
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .img_on_grace_page {
+  width: 100%;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .img_on_grace_page img {
+  object-fit: cover;
+  width: 100%;
+  height: 20dvh;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .details_on_grace_page h1 {
+  color: #d9592f;
+  margin-bottom: 0;
+  font-size: clamp(.5rem, 2vw, 1rem);
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .details_on_grace_page p {
+  margin-top: 0;
+  font-size: 10px;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a {
+  width: 50%;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh {
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .img_on_josh_page {
+  width: 80%;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .img_on_josh_page img {
+  object-fit: cover;
+  width: 100%;
+  height: 20dvh;
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .details_on_josh_page h1 {
+  color: #d9592f;
+  margin-bottom: 0;
+  font-size: clamp(.5rem, 2vw, 1rem);
+}
+
+.main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .details_on_josh_page p {
+  margin-top: 0;
+  font-size: 10px;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 {
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey {
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .img_on_rosey_page {
+  width: 80%;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .img_on_rosey_page img {
+  object-fit: cover;
+  width: 100%;
+  height: 20dvh;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .details_on_rosey_page h1 {
+  color: #d9592f;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 2vw, 1rem);
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .details_on_rosey_page p {
+  margin-top: 0;
+  font-size: 10px;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a {
+  width: 50%;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi {
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .img_on_Abetifi_page {
+  width: 80%;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .img_on_Abetifi_page img {
+  object-fit: cover;
+  width: 100%;
+  height: 20dvh;
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .details_on_Abetifi_page h1 {
+  color: #d9592f;
+  margin-bottom: 0;
+  font-size: clamp(.5rem, 2vw, 1rem);
+}
+
+.main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .details_on_Abetifi_page p {
+  margin-top: 0;
+  font-size: 10px;
+}
+
+.navigation_content_div {
+  z-index: 4;
+  cursor: pointer;
+  position: fixed;
+  top: 90%;
+  left: 5%;
+}
+
+.navigation_content_div .navigation_img {
+  background-color: #fff;
+  border: 1px solid #8080807c;
+  border-radius: 80px;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding: 0 15px;
+  transition: all .3s;
+  display: flex;
+}
+
+.navigation_content_div .navigation_img img {
+  width: 15%;
+}
+
+.navigation_content_div .navigation_img:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.navigation_content_div .navigation_img:hover img {
+  filter: invert();
+}
+
 .projects_container .container {
   width: 70%;
   margin: 0 auto;
@@ -1649,6 +1861,172 @@ a {
     line-height: 4;
     font-size: .7rem !important;
     display: block !important;
+  }
+
+  body .service_container .service_banner {
+    height: 90dvh;
+  }
+
+  body .service_container .service_banner .mobile_manu_container {
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu .div {
+    border-bottom: 1px solid gray;
+    width: 100%;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu .div h1 {
+    text-align: right;
+    text-transform: uppercase;
+    padding-right: 18px;
+    font-size: 1rem;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact {
+    width: 80%;
+    margin: auto;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact {
+    width: 60%;
+    margin-left: 30px;
+    position: absolute;
+    right: 0;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location {
+    border-bottom: 1px solid red;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location p {
+    text-align: right;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email {
+    border-bottom: 1px solid red;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email p {
+    text-align: right;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact {
+    border-bottom: 1px solid red;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact p {
+    text-align: right;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .service_container .service_banner .service_banner_text {
+    width: 90%;
+    display: block;
+    top: 95%;
+    transform: translateY(-95%);
+  }
+
+  body .service_container .service_banner .service_banner_text .first_text {
+    width: 100%;
+  }
+
+  body .service_container .service_banner .service_banner_text .first_text h1 {
+    font-size: 2rem;
+  }
+
+  body .service_container .service_banner .service_banner_text .first_text p {
+    letter-spacing: 1px;
+    font-size: .7rem;
+  }
+
+  body .service_container .service_banner .service_banner_text .second_text p {
+    letter-spacing: .9px;
+    font-size: .8rem;
+    line-height: 1.7;
+    display: none;
+  }
+
+  body .service_container .text_container {
+    flex-direction: column;
+    width: 85%;
+  }
+
+  body .service_container .text_container .div1 {
+    text-align: center;
+    place-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    display: grid;
+  }
+
+  body .service_container .text_container .div1 h1 {
+    text-align: center;
+    color: #000;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    font-size: 2rem;
+  }
+
+  body .service_container .text_container .div1 .line {
+    border-top: 1px solid gray;
+    width: 50px;
+  }
+
+  body .service_container .text_container .div2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  body .service_container .text_container .div2 p {
+    letter-spacing: 1px;
+    text-align: center;
+    border-left: none;
+    padding: 0;
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+
+  body .service_container .container .service_flexbox {
+    grid-template-columns: auto;
+  }
+
+  body .service_container .container .service_flexbox .service_flex {
+    flex-direction: column;
+  }
+
+  body .service_container .container .service_flexbox .service_flex .img {
+    width: 100%;
+  }
+
+  body .service_container .container .service_flexbox .service_flex .content {
+    width: 80%;
+    padding-bottom: 20px;
+  }
+
+  body .service_container .container .service_flexbox .service_flex .content p {
+    letter-spacing: .9px;
+    font-size: .8rem;
   }
 }
 

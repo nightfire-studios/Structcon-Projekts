@@ -1,3 +1,5 @@
+import gsap from "gsap"
+
 const project_trey = document.querySelector('.project_viewport')
 const projects = document.querySelectorAll('.project')
 const project_count = document.querySelector('.project_count')
@@ -184,4 +186,32 @@ export const intersetion_observer = ()=>{
    content_img2.forEach(items=>{
     observer.observe(items)
    })
+}
+
+export const quickNav = ()=>{
+    //Quick navigation menu begins here...
+    const main_navigation_content = document.querySelector('.main_navigation_content')
+    const quick_nav_button = document.querySelector('.quick_nav_button')
+    var toggle = false
+
+    quick_nav_button.onclick = ()=>{
+        
+        if(toggle=!toggle){
+            gsap.to(main_navigation_content,{
+                display:'flex',
+                opacity:1,
+               
+            })
+        }else{
+            gsap.to(main_navigation_content,{
+                opacity:0,
+               
+                onComplete:()=>{
+                    gsap.to(main_navigation_content,{
+                        display:'none',
+                    })
+                }
+            })
+        }
+    }
 }

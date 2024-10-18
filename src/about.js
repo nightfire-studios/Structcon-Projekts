@@ -9,6 +9,7 @@ import quantity_surveyor from './images/personneL/quantity_survayor.jpeg'
 import mep from './images/personnel/mep.jpeg'
 import interior_design from './images/personnel/interior.jpeg'
 import civil_engineer from './images/personnel/civil_engineer.jpg'
+import gsap from 'gsap'
 
 
 
@@ -161,5 +162,10 @@ personnel_information.forEach(items => {
     personnel_card.innerHTML = template
    personnel_container.appendChild(personnel_card)
 })
+
+
 }
+
+
+
 
