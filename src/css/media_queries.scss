@@ -2,7 +2,7 @@ $color-primary: #D9592F;
 
 @media screen and (max-width:500px) {
     body {
-
+        
         section {
 
             .balance{
@@ -44,10 +44,12 @@ $color-primary: #D9592F;
 
                                     .line_holder{
                                         width: 50%;
+                                        position: relative;
                                         .line{
                                             width: 100%;
                                             border: solid .5px white;
                                             margin-top: 15px;
+                                            transition: .5s;
 
                                             &:first-child{
                                                 margin-top: 0;
@@ -255,19 +257,21 @@ $color-primary: #D9592F;
                     top: 0;
                     background-color: white;
                     z-index: 2;
+                    transform: translate(100%);
+                    display: block;
 
                     .mobile_manu{
                         
                         .div{
                             width: 100%;
-                            border-bottom: 1px solid grey;
+                            border-bottom: 1px solid rgb(205, 205, 205);
 
                             h1{
                                 text-align: right;
-                                font-size: 1rem;
-                                
-                                padding-right: 18px;
+                                font-size: 1rem; 
+                                padding: 15px 18px 15px 0;
                                 text-transform: uppercase;
+                                transform: translate(30%);
                             }
                         }
                     }
@@ -276,10 +280,12 @@ $color-primary: #D9592F;
                         width: 80%;
                         margin: auto;
                         .mobile_contact{
-                            width: 60%;
-                            margin-left: 30px;
+                            width: 80%;
+                            margin-right: 30px;
                             position: absolute;
                             right: 0;
+                            margin-top: 50px;
+                            opacity: 0;
 
                             .manu_location{
                                 border-bottom: 1px solid red;
@@ -306,6 +312,7 @@ $color-primary: #D9592F;
     
                             .manu_contact{
                                 border-bottom: 1px solid red;
+                                
                                 p{
                                     text-align: right;
                                 }
@@ -314,10 +321,48 @@ $color-primary: #D9592F;
                                     font-size: .9rem;
                                 }
                             }
+
+                            .menu_location,.menu_contact,.manu_email{
+                                p,h1{
+                                    letter-spacing: 1.2;
+                                }
+                            }
                         }
 
                        
                     }
+
+
+                    .social_media{
+                        position: absolute;
+                        top: 80%;
+                        right: 10%;
+                        nav{
+                            display: flex;
+                            justify-content: right;
+                            align-items: center;
+                            gap: 20px;
+
+                            p{
+                                font-size: .7rem;
+                            }
+
+                            h1{
+                                font-size: .7rem;
+                            }
+
+                        }
+                    }
+
+                  .media_developer{
+                    p{
+                        position: absolute;
+                        top: 83%;
+                        right: 10%;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                  }
 
                   
 
@@ -418,9 +463,401 @@ $color-primary: #D9592F;
                         }
                     }
                 }
+
+             
             }
      
         }
+
+        .projects_container{
+            .container{
+                width: 95%;
+
+            }
+            .project_intro{
+                .container{
+                    display: block;
+                    justify-items: center;
+
+                    .title{
+                        width: 50%;
+                        h1{
+                            text-align: center;
+                            margin-bottom: 30px;
+                            font-size: 1.2rem;
+                            font-weight: 900;
+                        }
+                    }
+
+                    .content{
+                        width: 80%;
+                        line-height: 1.4rem;
+                    }
+                }
+            }
+
+            .project_content{
+                margin: 5rem 0;
+                .content1{
+                    .container{
+                        .flexbox{
+                            display: block;
+                            
+                            .flex:first-child{
+                                width: 100%;
+                                margin-bottom: 10px;
+                            }
+
+                            .flex:last-child{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .content2{
+                    .content{
+                        width: 100%;
+                        h1{
+                            width: 100%;
+                        }
+                    }
+
+                    .container{
+
+                    .content_img2  {     
+                        height: 20vh;
+                    }
+                        .content_img{
+                            margin-top: 40px;
+                        }
+                    }
+
+                }
+            }
+
+            .project_carousel{
+                margin: 20px 0;
+                padding: 20px 0;
+                 .container{
+                     .carousel_flexbox{
+                        display: block;
+
+                        .flex:first-child{
+                            width: 100%;
+
+                            .content{
+                                .carousel_count{
+                                    h1{
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .flex:last-child{
+                            width: 100%;
+
+                            .arrow{
+                                background-image: none;
+                            }
+
+                            .arrow:last-child{
+                                background-image: none;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+
+        .about_us_container{
+
+            .about_banner{
+                height: 75svh;
+            }
+
+            .container{
+                .lead_personnel{
+                    .lead_title{
+                      
+                    }
+                    .personnel_container{
+                        display: block;
+                    }
+                    .lead_title{
+                        .associates{
+                            display: block;
+                        }
+                        h1{
+                            font-size: 2rem;  
+                          }
+                    }
+                }
+
+                .intro_content{
+                    display: block;
+
+                    .flex:first-child{
+                        width: 100%;
+                    }
+
+                    .flex:last-child{
+                        width:100%;
+                    }
+                }
+
+                .mid_content{
+                    display: block;
+
+                 .mid_content_text{
+                    .heading h1{
+                        font-size: 1.5rem;
+                    }
+                 }
+                    
+                    .mid_content_img{
+                        img{
+                            height: 40dvh;
+                        }
+                    }
+                }
+
+                .content_details{
+                    display: block;
+                    margin-top: 50px;
+
+                    .details_on_vision{
+                        width: 100%;
+
+                        .vision_text{
+                            margin: 0;
+
+                            .icon{
+                               place-items: left;
+                               display: flex;
+
+                        
+                            }
+                        }
+
+                        .border_line1 p{
+                            border-left: none;
+                            height: none;
+                        }
+                    }
+
+                    .details_on_values{
+                        width: 100%;
+                            .icon{
+                                place-items: left;
+                                display: flex;
+                             }
+                    }
+
+                    .details_on_mission{
+                        width: 100%;
+
+                        .vision_text{
+                            margin: 0;
+
+                            .icon{
+                                place-items: left;
+                                display: flex;
+                                margin-bottom: 20px;
+                             }
+                            
+                        }
+
+                        .border_line2 h1{
+                            border-left: none;
+                            height: none;
+                        }
+                    }
+                }
+
+                .community_service{
+                    margin: 50px 0;
+                    display: block;
+
+                    .content{
+                        width: 100%;
+                        h1{
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .community_image{
+                        width: 100%;
+                        margin-top: 30px;
+
+                        p{
+                        padding-bottom:20px;
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+            }
+
+        }
+
+        .mobile_menu_holder{
+            width: 100%;
+            height: 90dvh;
+            position: absolute;
+            top: 100%;
+            transform: translateY(-100%);
+            z-index: 2;
+            overflow: hidden;
+            pointer-events: none;
+            
+            .mobile_manu_container{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background-color: white;
+                z-index: 2;
+                transform: translate(100%);
+                display: block;
+               
+
+                .mobile_manu{
+                    
+                    .div{
+                        width: 100%;
+                        border-bottom: 1px solid rgb(205, 205, 205);
+
+                        h1{
+                            text-align: right;
+                            font-size: 1rem; 
+                            padding: 15px 18px 15px 0;
+                            text-transform: uppercase;
+                            transform: translate(30%);
+                        }
+                    }
+                }
+
+                .mobile_manu_contact{
+                    width: 80%;
+                    margin: auto;
+                    .mobile_contact{
+                        width: 80%;
+                        margin-right: 30px;
+                        position: absolute;
+                        right: 0;
+                        margin-top: 50px;
+                        opacity: 0;
+
+                        .manu_location{
+                            border-bottom: 1px solid red;
+                            
+                            p{
+                                text-align: right;
+                            }
+                            h1{
+                                text-align: right;
+                                font-size: .9rem;
+                            }
+                        }
+
+                        .manu_email{
+                            border-bottom: 1px solid red;
+                            p{
+                                text-align: right;
+                            }
+                            h1{
+                                text-align: right;
+                                font-size: .9rem;
+                            }
+                        }
+
+                        .manu_contact{
+                            border-bottom: 1px solid red;
+                            
+                            p{
+                                text-align: right;
+                            }
+                            h1{
+                                text-align: right;
+                                font-size: .9rem;
+                            }
+                        }
+
+                        .menu_location,.menu_contact,.manu_email{
+                            p,h1{
+                                letter-spacing: 1.2;
+                            }
+                        }
+                    }
+
+                   
+                }
+
+
+                .social_media{
+                    position: absolute;
+                    top: 80%;
+                    right: 10%;
+                    nav{
+                        display: flex;
+                        justify-content: right;
+                        align-items: center;
+                        gap: 20px;
+
+                        p{
+                            font-size: .7rem;
+                        }
+
+                        h1{
+                            font-size: .7rem;
+                        }
+
+                    }
+                }
+
+              .media_developer{
+                p{
+                    position: absolute;
+                    top: 83%;
+                    right: 10%;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+              }
+
+              
+
+
+            }
+        }
+
+        .project_container{
+            .container{
+                .project_flexbox{
+                    display: block;
+
+                    .project_details{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
 
     }   
 

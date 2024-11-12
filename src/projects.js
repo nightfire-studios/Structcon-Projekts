@@ -26,6 +26,10 @@ const gallery_trey = document.querySelector('.gallery_trey')
 
 const gallery_length = document.querySelectorAll('.gallery_trey img').length
 
+
+
+
+
 document.addEventListener('DOMContentLoaded',()=>{
 
     projects_total.textContent = '0' + totalItems
@@ -215,3 +219,4 @@ export const quickNav = ()=>{
         }
     }
 }
+

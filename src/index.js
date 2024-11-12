@@ -1,18 +1,19 @@
-import {gsap} from "gsap";
+
 import {navHover} from './nav_menus.js'
 import {carousel} from './carousel.js'
 import {galleryCarousel, projectCarausel, projectFunctions,intersetion_observer, quickNav} from './projects.js'
 import {personnelFunction} from './about.js'
+import { mobileMenuFunctions } from "./mobile_menu.js";
 
 
-
+mobileMenuFunctions()
 try {
 
 navHover()
 carousel()
 
+
 } catch (error) {
-  console.error('Error in navHover or carousel:', error);
 }
 
 try {
@@ -20,7 +21,6 @@ try {
   projectFunctions()
 
 } catch (error) {
-  console.error('Error in pro:', error);
 }
 
 try {
@@ -30,7 +30,6 @@ try {
   quickNav()
 
 } catch (error) {
-  console.error('Error in pc:', error);
 }
 
 try {
@@ -38,6 +37,7 @@ try {
 } catch (error) {
   
 }
+
 
 
 

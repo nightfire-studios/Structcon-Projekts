@@ -36,6 +36,11 @@ $helevetica-bold: Helvetica-bold;
         background-position: center;
         background-size: cover;
         position: relative;
+        overflow: hidden;
+
+        .mobile_manu_container{
+            display: none;
+        }
 
         .overlay {
             width: inherit;
@@ -69,7 +74,7 @@ $helevetica-bold: Helvetica-bold;
             justify-content: space-between;
             align-items: center;
             position: absolute;
-            top: 80%;
+            top: 75%;
             left: 5%;
 
 

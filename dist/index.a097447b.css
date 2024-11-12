@@ -243,6 +243,11 @@ a {
   width: 100%;
   height: 92vh;
   position: relative;
+  overflow: hidden;
+}
+
+.service_container .service_banner .mobile_manu_container {
+  display: none;
 }
 
 .service_container .service_banner .overlay {
@@ -277,7 +282,7 @@ a {
   margin: auto;
   display: flex;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 5%;
 }
 
@@ -1728,12 +1733,14 @@ a {
 
   body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder {
     width: 50%;
+    position: relative;
   }
 
   body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder .line {
     border: .5px solid #fff;
     width: 100%;
     margin-top: 15px;
+    transition: all .5s;
   }
 
   body section nav .container .flexbox .flex:nth-child(3) .mobile_menu .line_holder .line:first-child {
@@ -1872,20 +1879,23 @@ a {
     background-color: #fff;
     width: 100%;
     height: 100%;
+    display: block;
     position: absolute;
     top: 0;
+    transform: translate(100%);
   }
 
   body .service_container .service_banner .mobile_manu_container .mobile_manu .div {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #cdcdcd;
     width: 100%;
   }
 
   body .service_container .service_banner .mobile_manu_container .mobile_manu .div h1 {
     text-align: right;
     text-transform: uppercase;
-    padding-right: 18px;
+    padding: 15px 18px 15px 0;
     font-size: 1rem;
+    transform: translate(30%);
   }
 
   body .service_container .service_banner .mobile_manu_container .mobile_manu_contact {
@@ -1894,8 +1904,10 @@ a {
   }
 
   body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact {
-    width: 60%;
-    margin-left: 30px;
+    opacity: 0;
+    width: 80%;
+    margin-top: 50px;
+    margin-right: 30px;
     position: absolute;
     right: 0;
   }
@@ -1937,6 +1949,35 @@ a {
   body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact h1 {
     text-align: right;
     font-size: .9rem;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_location p, body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_location h1, body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_contact p, body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_contact h1, body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email p, body .service_container .service_banner .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email h1 {
+    letter-spacing: 1.2px;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .social_media {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .social_media nav {
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .social_media nav p, body .service_container .service_banner .mobile_manu_container .social_media nav h1 {
+    font-size: .7rem;
+  }
+
+  body .service_container .service_banner .mobile_manu_container .media_developer p {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 83%;
+    right: 10%;
   }
 
   body .service_container .service_banner .service_banner_text {
@@ -2027,6 +2068,311 @@ a {
   body .service_container .container .service_flexbox .service_flex .content p {
     letter-spacing: .9px;
     font-size: .8rem;
+  }
+
+  body .projects_container .container {
+    width: 95%;
+  }
+
+  body .projects_container .project_intro .container {
+    justify-items: center;
+    display: block;
+  }
+
+  body .projects_container .project_intro .container .title {
+    width: 50%;
+  }
+
+  body .projects_container .project_intro .container .title h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  body .projects_container .project_intro .container .content {
+    width: 80%;
+    line-height: 1.4rem;
+  }
+
+  body .projects_container .project_content {
+    margin: 5rem 0;
+  }
+
+  body .projects_container .project_content .content1 .container .flexbox {
+    display: block;
+  }
+
+  body .projects_container .project_content .content1 .container .flexbox .flex:first-child {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  body .projects_container .project_content .content1 .container .flexbox .flex:last-child, body .projects_container .project_content .content2 .content, body .projects_container .project_content .content2 .content h1 {
+    width: 100%;
+  }
+
+  body .projects_container .project_content .content2 .container .content_img2 {
+    height: 20vh;
+  }
+
+  body .projects_container .project_content .content2 .container .content_img {
+    margin-top: 40px;
+  }
+
+  body .projects_container .project_carousel {
+    margin: 20px 0;
+    padding: 20px 0;
+  }
+
+  body .projects_container .project_carousel .container .carousel_flexbox {
+    display: block;
+  }
+
+  body .projects_container .project_carousel .container .carousel_flexbox .flex:first-child {
+    width: 100%;
+  }
+
+  body .projects_container .project_carousel .container .carousel_flexbox .flex:first-child .content .carousel_count h1 {
+    text-align: center;
+  }
+
+  body .projects_container .project_carousel .container .carousel_flexbox .flex:last-child {
+    width: 100%;
+  }
+
+  body .projects_container .project_carousel .container .carousel_flexbox .flex:last-child .arrow, body .projects_container .project_carousel .container .carousel_flexbox .flex:last-child .arrow:last-child {
+    background-image: none;
+  }
+
+  body .about_us_container .about_banner {
+    height: 75svh;
+  }
+
+  body .about_us_container .container .lead_personnel .personnel_container, body .about_us_container .container .lead_personnel .lead_title .associates {
+    display: block;
+  }
+
+  body .about_us_container .container .lead_personnel .lead_title h1 {
+    font-size: 2rem;
+  }
+
+  body .about_us_container .container .intro_content {
+    display: block;
+  }
+
+  body .about_us_container .container .intro_content .flex:first-child, body .about_us_container .container .intro_content .flex:last-child {
+    width: 100%;
+  }
+
+  body .about_us_container .container .mid_content {
+    display: block;
+  }
+
+  body .about_us_container .container .mid_content .mid_content_text .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  body .about_us_container .container .mid_content .mid_content_img img {
+    height: 40dvh;
+  }
+
+  body .about_us_container .container .content_details {
+    margin-top: 50px;
+    display: block;
+  }
+
+  body .about_us_container .container .content_details .details_on_vision {
+    width: 100%;
+  }
+
+  body .about_us_container .container .content_details .details_on_vision .vision_text {
+    margin: 0;
+  }
+
+  body .about_us_container .container .content_details .details_on_vision .vision_text .icon {
+    place-items: left;
+    display: flex;
+  }
+
+  body .about_us_container .container .content_details .details_on_vision .border_line1 p {
+    height: none;
+    border-left: none;
+  }
+
+  body .about_us_container .container .content_details .details_on_values {
+    width: 100%;
+  }
+
+  body .about_us_container .container .content_details .details_on_values .icon {
+    place-items: left;
+    display: flex;
+  }
+
+  body .about_us_container .container .content_details .details_on_mission {
+    width: 100%;
+  }
+
+  body .about_us_container .container .content_details .details_on_mission .vision_text {
+    margin: 0;
+  }
+
+  body .about_us_container .container .content_details .details_on_mission .vision_text .icon {
+    place-items: left;
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  body .about_us_container .container .content_details .details_on_mission .border_line2 h1 {
+    height: none;
+    border-left: none;
+  }
+
+  body .about_us_container .container .community_service {
+    margin: 50px 0;
+    display: block;
+  }
+
+  body .about_us_container .container .community_service .content {
+    width: 100%;
+  }
+
+  body .about_us_container .container .community_service .content h1 {
+    font-size: 1.5rem;
+  }
+
+  body .about_us_container .container .community_service .community_image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  body .about_us_container .container .community_service .community_image p {
+    padding-bottom: 20px;
+  }
+
+  body .mobile_menu_holder {
+    z-index: 2;
+    pointer-events: none;
+    width: 100%;
+    height: 90dvh;
+    position: absolute;
+    top: 100%;
+    overflow: hidden;
+    transform: translateY(-100%);
+  }
+
+  body .mobile_menu_holder .mobile_manu_container {
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    transform: translate(100%);
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu .div {
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu .div h1 {
+    text-align: right;
+    text-transform: uppercase;
+    padding: 15px 18px 15px 0;
+    font-size: 1rem;
+    transform: translate(30%);
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact {
+    width: 80%;
+    margin: auto;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact {
+    opacity: 0;
+    width: 80%;
+    margin-top: 50px;
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location {
+    border-bottom: 1px solid red;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location p {
+    text-align: right;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email {
+    border-bottom: 1px solid red;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email p {
+    text-align: right;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact {
+    border-bottom: 1px solid red;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact p {
+    text-align: right;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact h1 {
+    text-align: right;
+    font-size: .9rem;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_location p, body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_location h1, body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_contact p, body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .menu_contact h1, body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email p, body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email h1 {
+    letter-spacing: 1.2px;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .social_media {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .social_media nav {
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .social_media nav p, body .mobile_menu_holder .mobile_manu_container .social_media nav h1 {
+    font-size: .7rem;
+  }
+
+  body .mobile_menu_holder .mobile_manu_container .media_developer p {
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 83%;
+    right: 10%;
+  }
+
+  body .project_container .container .project_flexbox {
+    display: block;
+  }
+
+  body .project_container .container .project_flexbox .project_details {
+    width: 100%;
   }
 }
 

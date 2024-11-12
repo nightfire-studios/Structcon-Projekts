@@ -584,35 +584,409 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
-var _gsap = require("gsap");
 var _navMenusJs = require("./nav_menus.js");
 var _carouselJs = require("./carousel.js");
 var _projectsJs = require("./projects.js");
 var _aboutJs = require("./about.js");
+var _mobileMenuJs = require("./mobile_menu.js");
+(0, _mobileMenuJs.mobileMenuFunctions)();
 try {
     (0, _navMenusJs.navHover)();
     (0, _carouselJs.carousel)();
-} catch (error) {
-    console.error("Error in navHover or carousel:", error);
-}
+} catch (error) {}
 try {
     (0, _projectsJs.projectFunctions)();
-} catch (error) {
-    console.error("Error in pro:", error);
-}
+} catch (error) {}
 try {
     (0, _projectsJs.projectCarausel)();
     (0, _projectsJs.galleryCarousel)();
     (0, _projectsJs.intersetion_observer)();
     (0, _projectsJs.quickNav)();
-} catch (error) {
-    console.error("Error in pc:", error);
-}
+} catch (error) {}
 try {
     (0, _aboutJs.personnelFunction)();
 } catch (error) {}
 
-},{"gsap":"fPSuC","./nav_menus.js":"bSLmQ","./carousel.js":"iP1vB","./projects.js":"klhV6","./about.js":"jybPZ"}],"fPSuC":[function(require,module,exports) {
+},{"./nav_menus.js":"bSLmQ","./carousel.js":"iP1vB","./projects.js":"klhV6","./about.js":"jybPZ","./mobile_menu.js":"fzSKQ"}],"bSLmQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "navHover", ()=>navHover);
+const menu_items = document.querySelectorAll("nav ul a");
+const navHover = ()=>{
+    menu_items.forEach((items)=>{
+        items.classList.add("inactive");
+        items.addEventListener("mouseover", ()=>{
+            items.classList.remove("inactive");
+            menu_items.forEach((active_items)=>{
+                active_items.classList.remove("active");
+            });
+        });
+        items.addEventListener("mouseleave", ()=>{
+            items.classList.add("inactive");
+            menu_items.forEach((active_items)=>{
+                const active_id = active_items.getAttribute("data-id");
+                if (active_id == "active") active_items.classList.add("active");
+            });
+        });
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"iP1vB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "carousel", ()=>carousel);
+var _gsap = require("gsap");
+const carousel = ()=>{
+    const carousel_trey = document.querySelector(".image_trey");
+    const arrow_left = document.querySelector(".arrow_left");
+    const arrow_right = document.querySelector(".arrow_right");
+    const total_index = document.querySelectorAll(".project").length;
+    const featured_circle_nav = document.querySelectorAll(".featured_mini_nav .circle");
+    const banner_mini_nav = document.querySelectorAll(".mini_nav .circle");
+    const banner_image_trey = document.querySelector(".banner_image_trey");
+    const banner_navigation_h2 = document.querySelectorAll(".banner_navigation h2");
+    const element_total_count = document.querySelectorAll(".element").length - 1;
+    const element_total = document.querySelectorAll(".element");
+    const service_left_arrow = document.querySelector(".service_arrow_left");
+    const service_right_arrow = document.querySelector(".service_arrow_right");
+    const service_heading = document.querySelector(".service h1");
+    const service_body_text = document.querySelector(".service p");
+    var element_count = 0;
+    const rotate_value = 90;
+    var start_value = 0;
+    const move_value = 60;
+    var count = 2;
+    var value = 0;
+    const service_content = [
+        {
+            headings: [
+                "Project Management",
+                "Detailed Engineering Design",
+                "Conceptual Design and Feasibility Studies",
+                "Construction Supervision"
+            ]
+        },
+        {
+            contents: [
+                `Project management involves planning, organizing, and overseeing all phases of a project to ensure successful completion.`,
+                `
+                Detailed engineering design transforms conceptual plans into precise technical specifications.`,
+                `Conceptual design and feasibility studies assess the viability of a project in its early stages.`,
+                `
+                Construction supervision ensures that building projects are executed according to plans, specifications, and regulations. `
+            ]
+        }
+    ];
+    //Banner carousel codes begin here...
+    banner_mini_nav.forEach((items, index)=>{
+        items.style.cssText = `
+        width:6px;
+        height:6px;
+        background:transparent
+        `;
+        if (index == 0) items.style.cssText = `
+                width:10px;
+                height:10px;
+                background:white
+            `;
+        items.onclick = ()=>{
+            banner_mini_nav.forEach((banner_nav)=>{
+                banner_nav.style.cssText = `
+                    width:6px;
+                    height:6px;
+                    background:transparent
+                `;
+            });
+            items.style.cssText = `
+                width:10px;
+                height:10px;
+                background:white
+            `;
+            switch(index){
+                case 0:
+                    banner_image_trey.style.cssText = `
+                        left:0%
+                    `;
+                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
+                        h2_items.style.cssText = `
+                            font-size:1rem;
+                            font-weight:100;
+                            font-family:Helvetica-thin;
+                            color:grey;
+                        `;
+                        if (h2_index == 0) h2_items.style.cssText = `
+                            font-size:2.2rem;
+                            color:white,
+                            
+                        `;
+                    });
+                    break;
+                case 1:
+                    banner_image_trey.style.cssText = `
+                        left:-100%;
+                    `;
+                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
+                        h2_items.style.cssText = `
+                            font-size:1rem;
+                            font-weight:100;
+                             font-family:Helvetica-thin;
+                             color:grey;
+                        `;
+                        if (h2_index == 1) h2_items.style.cssText = `
+                            font-size:3rem;
+                            color:white
+                        `;
+                    });
+                    break;
+                case 2:
+                    banner_image_trey.style.cssText = `
+                        left:-200%
+                    `;
+                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
+                        h2_items.style.cssText = `
+                            font-size:1rem;
+                            font-weight:100;
+                             font-family:Helvetica-thin;
+                             color:grey;
+                        `;
+                        if (h2_index == 2) h2_items.style.cssText = `
+                            font-size:3rem;
+                            color:white
+                        `;
+                    });
+                    break;
+            }
+        };
+    });
+    //Featured projects carousel codes begin here...
+    arrow_right.onclick = ()=>{
+        if (count < total_index) {
+            count++;
+            value += move_value;
+            carousel_trey.style.cssText = `
+            transform:translateX(-${value}%)
+            `;
+        }
+        featured_circle_nav.forEach((items, index)=>{
+            items.style.cssText = `
+            width:5px;
+            height:5px;
+            background-color:transparent;
+    
+            `;
+            if (index == 1) items.style.cssText = `
+                width:10px;
+                height:10px;
+                background-color:white;
+    
+            `;
+        });
+    };
+    arrow_left.onclick = ()=>{
+        if (count > 2) {
+            count--;
+            value -= move_value;
+            carousel_trey.style.cssText = `
+             transform:translateX(-${value}%)
+             `;
+        }
+        featured_circle_nav.forEach((items, index)=>{
+            items.style.cssText = `
+            width:5px;
+            height:5px;
+            background-color:transparent;
+    
+            `;
+            if (index == 0) items.style.cssText = `
+                width:10px;
+                height:10px;
+                background-color:white;
+    
+            `;
+        });
+    };
+    featured_circle_nav.forEach((items, index)=>{
+        items.style.cssText = `
+        width:5px;
+        height:5px;
+        background-color:transparent;
+
+        `;
+        if (index == 0) items.style.cssText = `
+            width:10px;
+            height:10px;
+            background-color:white;
+
+        `;
+        items.onclick = ()=>{
+            featured_circle_nav.forEach((all_circle)=>{
+                all_circle.style.cssText = `
+                width:5px;
+                height:5px;
+                background-color:transparent;
+        
+            `;
+            });
+            items.style.cssText = `
+                width:10px;
+                height:10px;
+                background-color:white;
+
+            `;
+            if (index === 0) {
+                if (count > 1) {
+                    count--;
+                    value -= move_value;
+                    carousel_trey.style.cssText = `
+                     transform:translateX(${value}%)
+                     `;
+                }
+            } else if (count < total_index) {
+                count++;
+                value += move_value;
+                carousel_trey.style.cssText = `
+                    transform:translateX(-${value}%)
+                    `;
+            }
+        };
+    });
+    //Service carousel codes begin here...
+    let items = (0, _gsap.gsap).utils.toArray(".element");
+    items.forEach((item, index)=>{
+        item.style.transform = "scale(.6)";
+        const content = item.querySelector(".content");
+        if (index === 0) {
+            item.style.transform = "scale(1)";
+            content.style.opacity = 0;
+        }
+    });
+    // service_heading.textContent = service_content[0].headings[0]
+    // service_content.textContent = service_content[1].contents[0]
+    service_right_arrow.onclick = ()=>{
+        if (element_count < element_total_count) {
+            start_value += rotate_value;
+            (0, _gsap.gsap).to(".circle_carousel", {
+                rotation: `${start_value}`,
+                transformOrigin: "center",
+                duration: 5,
+                ease: "power4.out"
+            });
+            (0, _gsap.gsap).to(items, {
+                rotation: `-${start_value}`,
+                transformOrigin: "center",
+                duration: 2.5
+            });
+            //Changes the scale of the image on click
+            element_total.forEach((item, index)=>{
+                const content = item.querySelector(".content");
+                (0, _gsap.gsap).to(item, {
+                    scale: .6
+                });
+                (0, _gsap.gsap).to(content, {
+                    opacity: 1
+                });
+                var size_index = element_total_count - element_count;
+                if (index === size_index) {
+                    (0, _gsap.gsap).to(item, {
+                        scale: 1
+                    });
+                    (0, _gsap.gsap).to(content, {
+                        opacity: 0
+                    });
+                    service_heading.textContent = service_content[0].headings[size_index];
+                    service_body_text.textContent = service_content[1].contents[size_index];
+                }
+            });
+            element_count++;
+        } else {
+            element_count = 0;
+            start_value += rotate_value;
+            (0, _gsap.gsap).to(".circle_carousel", {
+                rotation: `${start_value}`,
+                transformOrigin: "center",
+                duration: 5,
+                ease: "power4.out"
+            });
+            (0, _gsap.gsap).to(items, {
+                rotation: `-${start_value}`,
+                transformOrigin: "center",
+                duration: 2.5
+            });
+            //Changes the scale of the image on click
+            var size_index = element_total_count - element_total_count;
+            service_heading.textContent = service_content[0].headings[size_index];
+            service_body_text.textContent = service_content[1].contents[size_index];
+            console.log(element_total[0]);
+            element_total.forEach((reset, reset_index)=>{
+                const content = reset.querySelector(".content");
+                (0, _gsap.gsap).to(reset, {
+                    scale: 0.6
+                });
+                (0, _gsap.gsap).to(content, {
+                    opacity: 1
+                });
+                if (reset_index === size_index) {
+                    (0, _gsap.gsap).to(reset, {
+                        scale: 1
+                    });
+                    (0, _gsap.gsap).to(content, {
+                        opacity: 0
+                    });
+                }
+            });
+        // element_total.forEach((item,index)=>{
+        //     // alert(index)
+        //     gsap.to(item,{
+        //         scale: 0.6,
+        //     })
+        //     gsap.to(content, {
+        //         opacity: 1
+        //     })
+        //     if(index == size_index){
+        //         gsap.to(item,{
+        //             scale:1
+        //         })
+        //         gsap.to(content, {
+        //             opacity: 0
+        //         })
+        //     }
+        // })
+        }
+    };
+//Carousel Function ends here...//
+};
+
+},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS);
@@ -3669,37 +4043,7 @@ _coreReady = 1;
 _windowExists() && _wake();
 var Power0 = _easeMap.Power0, Power1 = _easeMap.Power1, Power2 = _easeMap.Power2, Power3 = _easeMap.Power3, Power4 = _easeMap.Power4, Linear = _easeMap.Linear, Quad = _easeMap.Quad, Cubic = _easeMap.Cubic, Quart = _easeMap.Quart, Quint = _easeMap.Quint, Strong = _easeMap.Strong, Elastic = _easeMap.Elastic, Back = _easeMap.Back, SteppedEase = _easeMap.SteppedEase, Bounce = _easeMap.Bounce, Sine = _easeMap.Sine, Expo = _easeMap.Expo, Circ = _easeMap.Circ;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"l02JQ":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l02JQ":[function(require,module,exports) {
 /*!
  * CSSPlugin 3.12.5
  * https://gsap.com
@@ -4666,356 +5010,7 @@ var CSSPlugin = {
 });
 (0, _gsapCoreJs.gsap).registerPlugin(CSSPlugin);
 
-},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bSLmQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "navHover", ()=>navHover);
-const menu_items = document.querySelectorAll("nav ul a");
-const navHover = ()=>{
-    menu_items.forEach((items)=>{
-        items.classList.add("inactive");
-        items.addEventListener("mouseover", ()=>{
-            items.classList.remove("inactive");
-            menu_items.forEach((active_items)=>{
-                active_items.classList.remove("active");
-            });
-        });
-        items.addEventListener("mouseleave", ()=>{
-            items.classList.add("inactive");
-            menu_items.forEach((active_items)=>{
-                const active_id = active_items.getAttribute("data-id");
-                if (active_id == "active") active_items.classList.add("active");
-            });
-        });
-    });
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iP1vB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "carousel", ()=>carousel);
-var _gsap = require("gsap");
-const carousel = ()=>{
-    const carousel_trey = document.querySelector(".image_trey");
-    const arrow_left = document.querySelector(".arrow_left");
-    const arrow_right = document.querySelector(".arrow_right");
-    const total_index = document.querySelectorAll(".project").length;
-    const featured_circle_nav = document.querySelectorAll(".featured_mini_nav .circle");
-    const banner_mini_nav = document.querySelectorAll(".mini_nav .circle");
-    const banner_image_trey = document.querySelector(".banner_image_trey");
-    const banner_navigation_h2 = document.querySelectorAll(".banner_navigation h2");
-    const element_total_count = document.querySelectorAll(".element").length - 1;
-    const element_total = document.querySelectorAll(".element");
-    const service_left_arrow = document.querySelector(".service_arrow_left");
-    const service_right_arrow = document.querySelector(".service_arrow_right");
-    const service_heading = document.querySelector(".service h1");
-    const service_body_text = document.querySelector(".service p");
-    var element_count = 0;
-    const rotate_value = 90;
-    var start_value = 0;
-    const move_value = 60;
-    var count = 2;
-    var value = 0;
-    const service_content = [
-        {
-            headings: [
-                "Project Management",
-                "Detailed Engineering Design",
-                "Conceptual Design and Feasibility Studies",
-                "Construction Supervision"
-            ]
-        },
-        {
-            contents: [
-                `Project management involves planning, organizing, and overseeing all phases of a project to ensure successful completion.`,
-                `
-                Detailed engineering design transforms conceptual plans into precise technical specifications.`,
-                `Conceptual design and feasibility studies assess the viability of a project in its early stages.`,
-                `
-                Construction supervision ensures that building projects are executed according to plans, specifications, and regulations. `
-            ]
-        }
-    ];
-    //Banner carousel codes begin here...
-    banner_mini_nav.forEach((items, index)=>{
-        items.style.cssText = `
-        width:6px;
-        height:6px;
-        background:transparent
-        `;
-        if (index == 0) items.style.cssText = `
-                width:10px;
-                height:10px;
-                background:white
-            `;
-        items.onclick = ()=>{
-            banner_mini_nav.forEach((banner_nav)=>{
-                banner_nav.style.cssText = `
-                    width:6px;
-                    height:6px;
-                    background:transparent
-                `;
-            });
-            items.style.cssText = `
-                width:10px;
-                height:10px;
-                background:white
-            `;
-            switch(index){
-                case 0:
-                    banner_image_trey.style.cssText = `
-                        left:0%
-                    `;
-                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
-                        h2_items.style.cssText = `
-                            font-size:1rem;
-                            font-weight:100;
-                            font-family:Helvetica-thin;
-                            color:grey;
-                        `;
-                        if (h2_index == 0) h2_items.style.cssText = `
-                            font-size:2.2rem;
-                            color:white,
-                            
-                        `;
-                    });
-                    break;
-                case 1:
-                    banner_image_trey.style.cssText = `
-                        left:-100%;
-                    `;
-                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
-                        h2_items.style.cssText = `
-                            font-size:1rem;
-                            font-weight:100;
-                             font-family:Helvetica-thin;
-                             color:grey;
-                        `;
-                        if (h2_index == 1) h2_items.style.cssText = `
-                            font-size:3rem;
-                            color:white
-                        `;
-                    });
-                    break;
-                case 2:
-                    banner_image_trey.style.cssText = `
-                        left:-200%
-                    `;
-                    banner_navigation_h2.forEach((h2_items, h2_index)=>{
-                        h2_items.style.cssText = `
-                            font-size:1rem;
-                            font-weight:100;
-                             font-family:Helvetica-thin;
-                             color:grey;
-                        `;
-                        if (h2_index == 2) h2_items.style.cssText = `
-                            font-size:3rem;
-                            color:white
-                        `;
-                    });
-                    break;
-            }
-        };
-    });
-    //Featured projects carousel codes begin here...
-    arrow_right.onclick = ()=>{
-        if (count < total_index) {
-            count++;
-            value += move_value;
-            carousel_trey.style.cssText = `
-            transform:translateX(-${value}%)
-            `;
-        }
-        featured_circle_nav.forEach((items, index)=>{
-            items.style.cssText = `
-            width:5px;
-            height:5px;
-            background-color:transparent;
-    
-            `;
-            if (index == 1) items.style.cssText = `
-                width:10px;
-                height:10px;
-                background-color:white;
-    
-            `;
-        });
-    };
-    arrow_left.onclick = ()=>{
-        if (count > 2) {
-            count--;
-            value -= move_value;
-            carousel_trey.style.cssText = `
-             transform:translateX(-${value}%)
-             `;
-        }
-        featured_circle_nav.forEach((items, index)=>{
-            items.style.cssText = `
-            width:5px;
-            height:5px;
-            background-color:transparent;
-    
-            `;
-            if (index == 0) items.style.cssText = `
-                width:10px;
-                height:10px;
-                background-color:white;
-    
-            `;
-        });
-    };
-    featured_circle_nav.forEach((items, index)=>{
-        items.style.cssText = `
-        width:5px;
-        height:5px;
-        background-color:transparent;
-
-        `;
-        if (index == 0) items.style.cssText = `
-            width:10px;
-            height:10px;
-            background-color:white;
-
-        `;
-        items.onclick = ()=>{
-            featured_circle_nav.forEach((all_circle)=>{
-                all_circle.style.cssText = `
-                width:5px;
-                height:5px;
-                background-color:transparent;
-        
-            `;
-            });
-            items.style.cssText = `
-                width:10px;
-                height:10px;
-                background-color:white;
-
-            `;
-            if (index === 0) {
-                if (count > 1) {
-                    count--;
-                    value -= move_value;
-                    carousel_trey.style.cssText = `
-                     transform:translateX(${value}%)
-                     `;
-                }
-            } else if (count < total_index) {
-                count++;
-                value += move_value;
-                carousel_trey.style.cssText = `
-                    transform:translateX(-${value}%)
-                    `;
-            }
-        };
-    });
-    //Service carousel codes begin here...
-    let items = (0, _gsap.gsap).utils.toArray(".element");
-    items.forEach((item, index)=>{
-        item.style.transform = "scale(.6)";
-        const content = item.querySelector(".content");
-        if (index === 0) {
-            item.style.transform = "scale(1)";
-            content.style.opacity = 0;
-        }
-    });
-    // service_heading.textContent = service_content[0].headings[0]
-    // service_content.textContent = service_content[1].contents[0]
-    service_right_arrow.onclick = ()=>{
-        if (element_count < element_total_count) {
-            start_value += rotate_value;
-            (0, _gsap.gsap).to(".circle_carousel", {
-                rotation: `${start_value}`,
-                transformOrigin: "center",
-                duration: 5,
-                ease: "power4.out"
-            });
-            (0, _gsap.gsap).to(items, {
-                rotation: `-${start_value}`,
-                transformOrigin: "center",
-                duration: 2.5
-            });
-            //Changes the scale of the image on click
-            element_total.forEach((item, index)=>{
-                const content = item.querySelector(".content");
-                (0, _gsap.gsap).to(item, {
-                    scale: .6
-                });
-                (0, _gsap.gsap).to(content, {
-                    opacity: 1
-                });
-                var size_index = element_total_count - element_count;
-                if (index === size_index) {
-                    (0, _gsap.gsap).to(item, {
-                        scale: 1
-                    });
-                    (0, _gsap.gsap).to(content, {
-                        opacity: 0
-                    });
-                    service_heading.textContent = service_content[0].headings[size_index];
-                    service_body_text.textContent = service_content[1].contents[size_index];
-                }
-            });
-            element_count++;
-        } else {
-            element_count = 0;
-            start_value += rotate_value;
-            (0, _gsap.gsap).to(".circle_carousel", {
-                rotation: `${start_value}`,
-                transformOrigin: "center",
-                duration: 5,
-                ease: "power4.out"
-            });
-            (0, _gsap.gsap).to(items, {
-                rotation: `-${start_value}`,
-                transformOrigin: "center",
-                duration: 2.5
-            });
-            //Changes the scale of the image on click
-            var size_index = element_total_count - element_total_count;
-            service_heading.textContent = service_content[0].headings[size_index];
-            service_body_text.textContent = service_content[1].contents[size_index];
-            console.log(element_total[0]);
-            element_total.forEach((reset, reset_index)=>{
-                const content = reset.querySelector(".content");
-                (0, _gsap.gsap).to(reset, {
-                    scale: 0.6
-                });
-                (0, _gsap.gsap).to(content, {
-                    opacity: 1
-                });
-                if (reset_index === size_index) {
-                    (0, _gsap.gsap).to(reset, {
-                        scale: 1
-                    });
-                    (0, _gsap.gsap).to(content, {
-                        opacity: 0
-                    });
-                }
-            });
-        // element_total.forEach((item,index)=>{
-        //     // alert(index)
-        //     gsap.to(item,{
-        //         scale: 0.6,
-        //     })
-        //     gsap.to(content, {
-        //         opacity: 1
-        //     })
-        //     if(index == size_index){
-        //         gsap.to(item,{
-        //             scale:1
-        //         })
-        //         gsap.to(content, {
-        //             opacity: 0
-        //         })
-        //     }
-        // })
-        }
-    };
-//Carousel Function ends here...//
-};
-
-},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"klhV6":[function(require,module,exports) {
+},{"./gsap-core.js":"05eeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"klhV6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "projectFunctions", ()=>projectFunctions);
@@ -5427,6 +5422,66 @@ module.exports = require("723d4b9af8292fd2").getBundleURL("bLxZJ") + "interior.f
 },{"723d4b9af8292fd2":"lgJ39"}],"8KbOL":[function(require,module,exports) {
 module.exports = require("252a22870a8e93e0").getBundleURL("bLxZJ") + "civil_engineer.2b4a8dc8.jpg" + "?" + Date.now();
 
-},{"252a22870a8e93e0":"lgJ39"}]},["farZc","8lqZg"], "8lqZg", "parcelRequiref68c")
+},{"252a22870a8e93e0":"lgJ39"}],"fzSKQ":[function(require,module,exports) {
+var _gsap = require("gsap");
+const mobileMenuFunctions = ()=>{
+    const mobile_menu = document.querySelector(".mobile_menu");
+    const mobile_menu_container = document.querySelector(".mobile_manu_container");
+    const all_menu = document.querySelectorAll(".mobile_manu div h1");
+    const mobile_contact = document.querySelector(".mobile_contact");
+    const menu_line = document.querySelectorAll(".line_holder .line");
+    var mobileBool = true;
+    mobileBool = !mobileBool;
+    mobile_menu.onclick = ()=>{
+        const timeline = (0, _gsap.gsap).timeline();
+        if (mobileBool = !mobileBool) {
+            timeline.to(mobile_menu_container, {
+                transform: "translate(0)"
+            }).to(all_menu, {
+                transform: "translate(0)",
+                stagger: .1
+            }).to(mobile_contact, {
+                opacity: 1
+            });
+            menu_line.forEach((items, index)=>{
+                if (index == 0) items.style.cssText = `
+                        transform:rotate(45deg);
+                        position:absolute;
+                        top:50%;
+                    `;
+                else if (index == 1) items.style.cssText = `
+                        transform:rotate(-45deg);
+                        margin:0;
+                       
+                    `;
+            });
+        } else {
+            timeline.to(mobile_menu_container, {
+                transform: "translate(100%)"
+            }).to(all_menu, {
+                transform: "translate(30%)"
+            }).to(mobile_contact, {
+                opacity: 0
+            });
+            menu_line.forEach((items, index)=>{
+                if (index == 0) items.style.cssText = `
+                        transform:rotate(0deg);
+                        position:absolute;
+                        top:0;
+                    `;
+                else if (index == 1) items.style.cssText = `
+                        transform:rotate(odpdeg);
+                        margin-top:15px;
+                       
+                    `;
+            });
+        }
+    };
+};
+module.exports = {
+    mobileMenuFunctions
+};
+
+},{"gsap":"fPSuC"}]},["farZc","8lqZg"], "8lqZg", "parcelRequiref68c")
 
 //# sourceMappingURL=index.975ef6c8.js.map
