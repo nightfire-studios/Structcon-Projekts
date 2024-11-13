@@ -714,6 +714,7 @@ $color-primary: #D9592F;
         }
 
         .mobile_menu_holder{
+            display: block !important;
             width: 100%;
             height: 90dvh;
             position: absolute;
@@ -851,6 +852,16 @@ $color-primary: #D9592F;
 
                     .project_details{
                         width: 100%;
+                    }
+                }
+            }
+
+            .project_intro{
+                .container{
+                    .content{
+                        p{
+                            text-align: center;
+                        }
                     }
                 }
             }

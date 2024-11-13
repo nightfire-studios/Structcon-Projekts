@@ -2259,6 +2259,7 @@ a {
     top: 100%;
     overflow: hidden;
     transform: translateY(-100%);
+    display: block !important;
   }
 
   body .mobile_menu_holder .mobile_manu_container {
@@ -2373,6 +2374,10 @@ a {
 
   body .project_container .container .project_flexbox .project_details {
     width: 100%;
+  }
+
+  body .project_container .project_intro .container .content p {
+    text-align: center;
   }
 
   body .main_navigation_content .navigation_content-flex {
@@ -2588,7 +2593,7 @@ body section nav .container .flexbox .flex:nth-child(2) ul .active {
   background-color: #d9592f;
 }
 
-body section nav .container .flexbox .flex:nth-child(3) {
+body section nav .container .flexbox .flex:nth-child(3), body section .mobile_menu_holder {
   display: none;
 }
 
