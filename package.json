@@ -4,8 +4,8 @@
   "description": "A contruction company aimed at satisfying all your building needs",
   "source": "src/index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "parcel",
+    "build": "parcel build "
   },
   "keywords": [
     "structcon",
