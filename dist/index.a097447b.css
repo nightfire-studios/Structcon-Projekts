@@ -2374,6 +2374,107 @@ a {
   body .project_container .container .project_flexbox .project_details {
     width: 100%;
   }
+
+  body .main_navigation_content .navigation_content-flex {
+    margin-top: 15px;
+  }
+
+  body .main_navigation_content .navigation_content-flex h1 {
+    font-size: 1.5rem;
+  }
+
+  body .main_navigation_content .navigation_content-flex h2 {
+    font-size: 1.7rem;
+  }
+
+  body .main_navigation_content .navigation_content {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace {
+    width: 85%;
+    margin: auto;
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .img_on_grace_page img {
+    height: 10dvh;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .details_on_grace_page h1 {
+    font-size: 1rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_grace .details_on_grace_page p {
+    font-size: .8rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh {
+    width: 85%;
+    margin: auto;
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .img_on_josh_page img {
+    width: 125%;
+    height: 10dvh;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .details_on_josh_page h1 {
+    font-size: 1rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content1 a .navigation_div_for_josh .details_on_josh_page p {
+    font-size: .8rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 {
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey {
+    width: 85%;
+    margin: auto;
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .img_on_rosey_page img {
+    width: 125%;
+    height: 10dvh;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .details_on_rosey_page h1 {
+    font-size: 1rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_rosey .details_on_rosey_page p {
+    font-size: .8rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi {
+    width: 85%;
+    margin: auto;
+    display: block;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .img_on_Abetifi_page img {
+    width: 125%;
+    height: 10dvh;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .details_on_Abetifi_page h1 {
+    font-size: 1rem;
+  }
+
+  body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .details_on_Abetifi_page p {
+    font-size: .8rem;
+  }
 }
 
 @font-face {

@@ -856,6 +856,127 @@ $color-primary: #D9592F;
             }
         }
 
+        .main_navigation_content{
+            .navigation_content-flex{
+                margin-top: 15px;
+                h1{
+                    font-size: 1.5rem;
+                }
+
+                h2{
+                    font-size: 1.7rem;
+                }
+            }
+
+            .navigation_content{
+                margin-top:20px;
+                width: 90%;
+                .navigation_content1{
+                    display: block;
+                    margin-bottom: 20px;
+
+                    a{
+                        .navigation_div_for_grace{
+                            display: block;
+                            width: 85%;
+                            margin: auto;
+
+                            .img_on_grace_page img{
+                                
+                                height: 10dvh;
+                            }
+
+                            .details_on_grace_page{
+                                h1{
+                                    font-size: 1rem;
+                                }
+
+                                p{
+                                    font-size: .8rem;
+                                }
+                            }
+
+                        }
+                        .navigation_div_for_josh{
+                            margin-top: 20px;
+                            display: block;
+                            width: 85%;
+                            margin: auto;
+
+                            .img_on_josh_page img{
+                                width: 125%;
+                                height: 10dvh;
+                            }
+
+                            
+                            .details_on_josh_page{
+                                h1{
+                                    font-size: 1rem;
+                                }
+
+                                p{
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .navigation_content2{
+                    display: block;
+
+                    a{
+                        .navigation_div_for_rosey{
+                            display: block;
+                            width: 85%;
+                            margin: auto;
+
+                            .img_on_rosey_page img{
+                                width: 125%;
+                                height: 10dvh;
+                            }
+                            .details_on_rosey_page{
+                                h1{
+                                    font-size: 1rem;
+                                }
+
+                                p{
+                                    font-size: .8rem;
+                                }
+                            }
+
+                        }
+                        .navigation_div_for_Abetifi{
+                            display: block;
+                            width: 85%;
+                            margin: auto;
+
+                          
+                            .img_on_Abetifi_page {
+
+                                img {
+                                    width: 125%;
+                                    height: 10dvh;
+                                }
+                            }
+                            
+                            .details_on_Abetifi_page{
+                                h1{
+                                    font-size: 1rem;
+                                }
+
+                                p{
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
 
     }   
 
