@@ -480,18 +480,24 @@ $color-primary: #D9592F;
                     justify-items: center;
 
                     .title{
-                        width: 50%;
+                        width: 70%;
                         h1{
                             text-align: center;
                             margin-bottom: 30px;
-                            font-size: 1.2rem;
+                            font-size: 1.3rem;
                             font-weight: 900;
                         }
                     }
 
                     .content{
-                        width: 80%;
+                        width: 95%;
                         line-height: 1.4rem;
+
+                        p{
+                            &:last-child{
+                                margin-top: 50px;
+                            }
+                        }
                     }
                 }
             }
@@ -716,13 +722,14 @@ $color-primary: #D9592F;
         .mobile_menu_holder{
             display: block !important;
             width: 100%;
-            height: 90dvh;
+            height: 89.5svh;
             position: absolute;
             top: 100%;
             transform: translateY(-100%);
-            z-index: 2;
+            z-index: 10;
             overflow: hidden;
             pointer-events: none;
+           
             
             .mobile_manu_container{
                 width: 100%;
@@ -733,7 +740,9 @@ $color-primary: #D9592F;
                 z-index: 2;
                 transform: translate(100%);
                 display: block;
-               
+                border-top: 1px solid  rgb(205, 205, 205);
+                pointer-events: auto;
+                touch-action: none;
 
                 .mobile_manu{
                     pointer-events: auto;
@@ -744,10 +753,11 @@ $color-primary: #D9592F;
 
                         h1{
                             text-align: right;
-                            font-size: 1rem; 
+                            font-size: clamp(.8rem,1vw,1rem); 
                             padding: 15px 18px 15px 0;
                             text-transform: uppercase;
                             transform: translate(30%);
+                            font-weight: bold;
                         }
                     }
                 }
@@ -768,6 +778,7 @@ $color-primary: #D9592F;
                             
                             p{
                                 text-align: right;
+                                font-size: clamp(.7rem,1vw,1rem);
                             }
                             h1{
                                 text-align: right;
@@ -779,6 +790,7 @@ $color-primary: #D9592F;
                             border-bottom: 1px solid red;
                             p{
                                 text-align: right;
+                                font-size: clamp(.7rem,1vw,1rem);
                             }
                             h1{
                                 text-align: right;
@@ -791,6 +803,7 @@ $color-primary: #D9592F;
                             
                             p{
                                 text-align: right;
+                                font-size: clamp(.7rem,1vw,1rem);
                             }
                             h1{
                                 text-align: right;
@@ -847,16 +860,35 @@ $color-primary: #D9592F;
         }
 
         .project_container{
+            position: relative;
             .container{
                 .project_flexbox{
-                    display: block;
+                    flex-direction: column-reverse;
+                    
 
                     .project_details{
                         width: 100%;
+                        display: none;
+                    }
+
+                    .project_images{
+                        width: 100%;
+
+                        .container{
+                            width: 100%;
+
+                            .project_viewport{
+                                height: 81svh;
+                            }
+                        }
                     }
                 }
             }
 
+           
+        }
+
+        .projects_container{
             .project_intro{
                 .container{
                     .content{
@@ -872,11 +904,11 @@ $color-primary: #D9592F;
             .navigation_content-flex{
                 margin-top: 15px;
                 h1{
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                 }
 
                 h2{
-                    font-size: 1.7rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -989,8 +1021,32 @@ $color-primary: #D9592F;
             }
         }
 
+        .navigation_content_div{
+            left: 0;
+            .navigation_img{
+                transform: scale(.8);
+                background-color: white;
+
+                
+            }
+        }
+
 
     }   
 
       
+}
+
+@media screen and (max-width:376px) {
+    body{
+        .mobile_menu_holder{
+            .mobile_manu_container{
+                .mobile_manu_contact{
+                    .mobile_contact{
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1195,7 +1195,8 @@ a {
 .projects_container .project_content .content1 .container .flexbox .flex:first-child h1 {
   color: #d9592f;
   margin-top: 0;
-  font-size: clamp(1rem, 2.5vw, 3rem);
+  font-size: clamp(1.3rem, 2.5vw, 3rem);
+  font-weight: 500;
 }
 
 .projects_container .project_content .content1 .container .flexbox .flex:first-child p {
@@ -2080,19 +2081,23 @@ a {
   }
 
   body .projects_container .project_intro .container .title {
-    width: 50%;
+    width: 70%;
   }
 
   body .projects_container .project_intro .container .title h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 900;
   }
 
   body .projects_container .project_intro .container .content {
-    width: 80%;
+    width: 95%;
     line-height: 1.4rem;
+  }
+
+  body .projects_container .project_intro .container .content p:last-child {
+    margin-top: 50px;
   }
 
   body .projects_container .project_content {
@@ -2251,10 +2256,10 @@ a {
   }
 
   body .mobile_menu_holder {
-    z-index: 2;
+    z-index: 10;
     pointer-events: none;
     width: 100%;
-    height: 90dvh;
+    height: 89.5svh;
     position: absolute;
     top: 100%;
     overflow: hidden;
@@ -2264,7 +2269,10 @@ a {
 
   body .mobile_menu_holder .mobile_manu_container {
     z-index: 2;
+    pointer-events: auto;
+    touch-action: none;
     background-color: #fff;
+    border-top: 1px solid #cdcdcd;
     width: 100%;
     height: 100%;
     display: block;
@@ -2286,7 +2294,8 @@ a {
     text-align: right;
     text-transform: uppercase;
     padding: 15px 18px 15px 0;
-    font-size: 1rem;
+    font-size: clamp(.8rem, 1vw, 1rem);
+    font-weight: bold;
     transform: translate(30%);
   }
 
@@ -2310,6 +2319,7 @@ a {
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location p {
     text-align: right;
+    font-size: clamp(.7rem, 1vw, 1rem);
   }
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_location h1 {
@@ -2323,6 +2333,7 @@ a {
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email p {
     text-align: right;
+    font-size: clamp(.7rem, 1vw, 1rem);
   }
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_email h1 {
@@ -2336,6 +2347,7 @@ a {
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact p {
     text-align: right;
+    font-size: clamp(.7rem, 1vw, 1rem);
   }
 
   body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact .manu_contact h1 {
@@ -2372,15 +2384,28 @@ a {
     right: 10%;
   }
 
+  body .project_container {
+    position: relative;
+  }
+
   body .project_container .container .project_flexbox {
-    display: block;
+    flex-direction: column-reverse;
   }
 
   body .project_container .container .project_flexbox .project_details {
     width: 100%;
+    display: none;
   }
 
-  body .project_container .project_intro .container .content p {
+  body .project_container .container .project_flexbox .project_images, body .project_container .container .project_flexbox .project_images .container {
+    width: 100%;
+  }
+
+  body .project_container .container .project_flexbox .project_images .container .project_viewport {
+    height: 81svh;
+  }
+
+  body .projects_container .project_intro .container .content p {
     text-align: center;
   }
 
@@ -2389,11 +2414,11 @@ a {
   }
 
   body .main_navigation_content .navigation_content-flex h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   body .main_navigation_content .navigation_content-flex h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   body .main_navigation_content .navigation_content {
@@ -2483,6 +2508,21 @@ a {
 
   body .main_navigation_content .navigation_content .navigation_content2 a .navigation_div_for_Abetifi .details_on_Abetifi_page p {
     font-size: .8rem;
+  }
+
+  body .navigation_content_div {
+    left: 0;
+  }
+
+  body .navigation_content_div .navigation_img {
+    background-color: #fff;
+    transform: scale(.8);
+  }
+}
+
+@media screen and (width <= 376px) {
+  body .mobile_menu_holder .mobile_manu_container .mobile_manu_contact .mobile_contact {
+    margin-top: auto;
   }
 }
 
